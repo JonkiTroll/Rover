@@ -23,6 +23,6 @@ arpa/inet.h
 -
 netinet/in.h
 -
-pigpio.h
+wiringPi.h
 -
 
