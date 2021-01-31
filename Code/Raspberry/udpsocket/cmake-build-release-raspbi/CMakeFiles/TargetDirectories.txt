@@ -1,3 +1,0 @@
-/home/pi/tmp/tmp.kO63BEdZcm/cmake-build-release-raspbi/CMakeFiles/rebuild_cache.dir
-/home/pi/tmp/tmp.kO63BEdZcm/cmake-build-release-raspbi/CMakeFiles/udpclient.dir
-/home/pi/tmp/tmp.kO63BEdZcm/cmake-build-release-raspbi/CMakeFiles/edit_cache.dir
