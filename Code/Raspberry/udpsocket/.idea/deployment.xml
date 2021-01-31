@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="Raspberry_pi (6f8be1dd-8d3e-4db0-88db-f186ff9a3ff5)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/pi/Cmake-Build" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="raspbi (4584452b-c429-4198-bbc9-1aff13190f86)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.tVKgPB7Ymz" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-raspbi" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-raspbi" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="raspbi (7ef85ab5-4d60-4269-ac85-67f760618862)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.kO63BEdZcm" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-raspbi" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-raspbi" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG   CMakeFiles/udpclient.dir/udpclient.c.o  -o udpclient  /usr/lib/libwiringPi.so 
