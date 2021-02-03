@@ -1,10 +1,11 @@
 cmake_minimum_required(VERSION 3.17)
 
-project(udpsocket C)
+project(udpsocket C CXX)
 
 set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 17)
 
-#add_executable(udpserver udpserver.c)
-add_executable(udpclient udpclient.c)
-find_library(wiringPi_LIB wiringPi)
-target_link_libraries(udpclient ${wiringPi_LIB})
+include_directories(include)
+
+add_subdirectory(src)
+
