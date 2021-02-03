@@ -2,15 +2,14 @@
 
 #define Resolution  12
 
-#define CALIBRATION 0
-
 static float integerResolution = 4095; //2^Resolution-1
 //static float dutyCycle = 0.2;
 
 const byte numChars = 32;
 char serialBuffer[32];
-
 bool newData = false;
+
+int speedWheel0, speedWheel1;
 
 void setupMotor()
 {
@@ -27,8 +26,8 @@ void recvWithEndMarker() {
     char rc;
 
     // if (Serial.available() > 0) {
-    while (Serial.available() > 0 && newData == false) {
-        rc = Serial.read();
+    while (Serial1.available() > 0 && !newData) {
+        rc = Serial1.read();
 
         if (rc != endMarker) {
             serialBuffer[ndx] = rc;
@@ -47,9 +46,8 @@ void recvWithEndMarker() {
 
 void showNewData() {
     if (newData == true) {
-        Serial.print("This just in ... ");
-        Serial.println(serialBuffer);
-        newData = false;
+        Serial1.print("This just in ... ");
+        Serial1.println(serialBuffer);
     }
 }
 
@@ -59,12 +57,8 @@ void setup() {
     analogWriteFrequency(9, 1000);
     analogWriteResolution(Resolution);
 
-    Serial.begin(115200);
+    Serial1.begin(115200);
 
-    while(!digitalRead(1));
-    recvWithEndMarker();
-
-    showNewData();
     //setupMotor();
 
 
@@ -72,5 +66,19 @@ void setup() {
 
 void loop() {
 // write your code here
+
+recvWithEndMarker();
+
+if(newData) {
+    showNewData();
+    speedWheel0 = (uint8_t) serialBuffer[0];
+    speedWheel1 = (uint8_t) serialBuffer[1];
+
+    if(speedWheel0 < 4095 && speedWheel0 > 0) {
+
+        analogWrite(9, speedWheel0);
+    }
+    newData = false;
+}
 
 }

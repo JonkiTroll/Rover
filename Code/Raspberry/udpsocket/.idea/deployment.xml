@@ -22,6 +22,17 @@
           </excludedPaths>
         </serverdata>
       </paths>
+      <paths name="raspbi (747d585f-197c-4857-9f9f-e66c8fd69178)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.850uSH5Nj7" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-raspbi" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-raspbi" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
       <paths name="raspbi (7ef85ab5-4d60-4269-ac85-67f760618862)">
         <serverdata>
           <mappings>
