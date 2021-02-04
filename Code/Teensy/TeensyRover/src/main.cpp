@@ -68,7 +68,7 @@ void loop() {
 // write your code here
 
 recvWithEndMarker();
-
+//TODO: Convert the value received from RPI to a PWM readable format.
 if(newData) {
     showNewData();
     speedWheel0 = (uint8_t) serialBuffer[0];
