@@ -44,6 +44,8 @@ namespace udp_client_server
 
         int                 send(const char *msg, size_t size);
 
+        int                 recv(char *msg, size_t max_size);
+
     private:
         int                 f_socket;
         int                 f_port;
@@ -51,7 +53,7 @@ namespace udp_client_server
         struct addrinfo *   f_addrinfo;
     };
 
-/*
+
     class udp_server
     {
     public:
@@ -71,7 +73,7 @@ namespace udp_client_server
         std::string         f_addr;
         struct addrinfo *   f_addrinfo;
     };
-*/
+
 } // namespace udp_client_server
 #endif
 // SNAP_UDP_CLIENT_SERVER_H
