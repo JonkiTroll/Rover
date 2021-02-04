@@ -55,16 +55,21 @@ int main() {
            len);
     printf("Hello message sent.\n");
 
-    char sendBuffer[32];
-
     for(;;){
         printf("Enter message to be sent: ");
-        fgets(sendBuffer, 32, stdin);
+        fgets(buffer, MAXLINE, stdin);
 
-        sendto(sockfd, (const char *)sendBuffer, strlen(sendBuffer),
+        sendto(sockfd, (const char *)buffer, MAXLINE,
                MSG_CONFIRM, (const struct sockaddr *) &cliaddr,
                len);
-        printf("The message you sent is %s\n", &sendBuffer);
+        printf("The message you sent is %s\n", &buffer);
+        /*
+        n = recvfrom(sockfd, (char *)buffer, MAXLINE,
+                     MSG_WAITALL, ( struct sockaddr *) &cliaddr,
+                     &len);
+        buffer[n] = '\0';
+        printf("Client : %s\n", buffer);
+    */
     }
 
 

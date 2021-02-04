@@ -141,7 +141,7 @@ namespace udp_client_server {
  * is set accordingly on error.
  */
     int udp_client::send(const char *msg, size_t size) {
-        return sendto(f_socket, msg, size, 0, f_addrinfo->ai_addr, f_addrinfo->ai_addrlen);
+        return sendto(f_socket, msg, size, MSG_CONFIRM, f_addrinfo->ai_addr, f_addrinfo->ai_addrlen);
     }
 
 
@@ -165,7 +165,7 @@ namespace udp_client_server {
  */
     int udp_client::recv(char *msg, size_t max_size)
     {
-        return ::recv(f_socket, msg, max_size, 0);
+        return ::recv(f_socket, msg, max_size, MSG_WAITALL);
     }
 
 

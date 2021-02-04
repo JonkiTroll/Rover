@@ -1,5 +1,5 @@
 
-add_library(udpClientClass Test_Code/udpClientClass.cpp)
+#add_library(udpClientClass Test_Code/udpClientClass.cpp)
 
 add_executable(udpserver udpserver.c)
 add_executable(udpclient udpclient.c)
@@ -9,4 +9,4 @@ add_executable(udpclient udpclient.c)
 
 #target_link_libraries(udpclient ${wiringPi_LIB})
 #target_link_libraries(serialtest ${wiringPi_LIB})
-add_executable(test Test_Code/udpclient_test.cpp Test_Code/udpClientClass.cpp)
+add_executable(test Test_Code/udpclient_test.cpp  Test_Code/udpClientClass.cpp)

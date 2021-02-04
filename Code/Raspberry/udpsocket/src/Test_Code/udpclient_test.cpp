@@ -30,6 +30,14 @@ using namespace std;
 
             speed = atoi(sendBuffer);
             cout << "Speed conversion : " << speed << endl;
+
+            if (speed <= 100 && speed >= 0){
+                //RoverClient.send(sendBuffer, i);
+                //TODO: Send buffer to teensy using UART
+
+            } else {
+                cout << "Value is not valid. Please enter a number between 0 to 100" << endl;
+            }
         }
 
     }
