@@ -1,5 +1,5 @@
 
-add_library(udpclientClass Test_Code/udpClientClass.cpp)
+add_library(udpClientClass Test_Code/udpClientClass.cpp)
 
 add_executable(udpserver udpserver.c)
 add_executable(udpclient udpclient.c)

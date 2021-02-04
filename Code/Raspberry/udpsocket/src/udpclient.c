@@ -24,6 +24,7 @@
 #define MAXLINE 1024
 
 
+
 void *sendThread(void *vargp)
 {
 /*
@@ -99,10 +100,12 @@ int main() {
 
 
         //speed = atoi(buffer);
-        sscanf(buffer, "%i", &speed);
-
+        sscanf(buffer, "%i", &speed); //
 
         //sleep(5);
+
+        //TODO: Send speed variable to Teensy using UART
+
 #if RASPBI_TRUE
         serialPrintf(fd, speed);
 #endif
