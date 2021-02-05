@@ -1,7 +1,6 @@
 
 import socket
 
- 
 
 localIP     = "kristofer.is"
 
@@ -22,7 +21,6 @@ bytesToSend         = str.encode(msgFromServer)
 
 UDPServerSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 
- 
 
 # Bind to address and ip
 
@@ -38,6 +36,11 @@ lastMsg = ''
 def sendToRover(msg):
         UDPServerSocket.sendto(str.encode(msg), roverIp)
         print("sent:",msg,"to rover")
+
+def sendToController(msg):
+        UDPServerSocket.sendto(str.encode(msg), controllerIp)
+        print("sent:",msg,"to rover")
+
 
 while(True):
 
@@ -56,22 +59,25 @@ while(True):
 
     
 
-    if format(message) == "b'i am controller'":
+    if format(message) == "b'i am controller'" and address != controllerIp:
         controllerIp = address
         UDPServerSocket.sendto(str.encode("Controller role assigned to: " + str(controllerIp)), controllerIp)
 
-    if format(message) == "b'i am rover'":
+    if format(message) == "b'i am rover'" and address != roverIp:
         roverIp = address
         UDPServerSocket.sendto(str.encode("Rover role assigned to: " + str(roverIp)), roverIp)
     
-    if roverIp != '':
-        #======================================= led controller
-        while True:
-            sendToRover(input("led on off?"))
+    if controllerIp != '' and address == roverIp:
+        if roverIp != '':
+            sendToController(message)
+        else:
+             sendToController("Sorry the rover hasnt logged on")
+
+    
+    if roverIp != '' and address == controllerIp:
+        if controllerIp != '':
+            sendToRover(message)
+        else:
+             sendToRover("Sorry the rover hasnt logged on")
 
 
-
-    # Sending a reply to client
-
-    #UDPServerSocket.sendto(bytesToSend, address)
-    #UDPServerSocket.sendto(str.encode("awww man i love hentai"), address)
