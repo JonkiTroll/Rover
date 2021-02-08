@@ -1,10 +1,10 @@
 import socket
 import numpy as np
 import cv2 as cv
+from time import sleep
 
-
-addr = ("127.0.0.1", 65534)
-buf = 512
+addr = ("kristofer.is", 65534)
+buf = 600
 width = 640
 height = 480
 code = b'start'
@@ -28,9 +28,9 @@ if __name__ == '__main__':
         frame = np.frombuffer(
             byte_frame, dtype=np.uint8).reshape(height, width, 3)
 
-        cv.imshow('recv', frame)
-        if cv.waitKey(1) & 0xFF == ord('q'):
-            break
+
+        cv.imwrite('/var/www/html/vid/vid.jpg', frame)
+        #sleep(0.1)
 
     s.close()
     cv.destroyAllWindows()
