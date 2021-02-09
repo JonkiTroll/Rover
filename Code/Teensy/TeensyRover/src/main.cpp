@@ -9,7 +9,7 @@ const byte numChars = 32;
 char serialBuffer[32];
 bool newData = false;
 
-int speedWheel0, speedWheel1;
+int speedWheel0, speedWheel1, pwm_value;
 
 void setupMotor()
 {
@@ -46,8 +46,8 @@ void recvWithEndMarker() {
 
 void showNewData() {
     if (newData == true) {
-        Serial1.print("This just in ... ");
-        Serial1.println(serialBuffer);
+        Serial.print("This just in ... ");
+        Serial.println(serialBuffer);
     }
 }
 
@@ -57,10 +57,15 @@ void setup() {
     analogWriteFrequency(9, 1000);
     analogWriteResolution(Resolution);
 
-    Serial1.begin(115200);
+    Serial.begin(115200);
+
+    Serial1.setRX(0);
+
+    Serial1.begin(57600);
 
     //setupMotor();
 
+    analogWrite(9, (int) (0.13*integerResolution));
 
 }
 
@@ -69,15 +74,30 @@ void loop() {
 
 recvWithEndMarker();
 //TODO: Convert the value received from RPI to a PWM readable format.
+
 if(newData) {
     showNewData();
-    speedWheel0 = (uint8_t) serialBuffer[0];
-    speedWheel1 = (uint8_t) serialBuffer[1];
+    //speedWheel0 = (uint8_t) serialBuffer[0];
+    //speedWheel1 = (uint8_t) serialBuffer[1];
 
-    if(speedWheel0 < 4095 && speedWheel0 > 0) {
-
-        analogWrite(9, speedWheel0);
+    speedWheel0 = atoi(serialBuffer);
+    Serial.printf("Speed: %i\n", speedWheel0);
+    //0 = 0, 100 = 4095
+    //We want 0 = 13, 100 = 24
+    //(13/100)*4095 = 532
+    //(24/100)*4095 = 983
+    if(speedWheel0 <= 100 && speedWheel0 > 0) {
+        pwm_value = 532+(speedWheel0*(983-532))/100;
+        analogWrite(9, pwm_value);
+    } else if (speedWheel0 == 0){
+        //Turn off pwm if something is funky
+        //analogWrite(9, 0);
     }
+
+    for(int n = 0; n < 32; n++){
+        serialBuffer[n] = '0';
+    }
+
     newData = false;
 }
 
