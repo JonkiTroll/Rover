@@ -1,0 +1,2 @@
+CMakeLists.txt not found in /home/jon/Documents/RCTank/Code/Raspberry/udpsocket Select CMakeLists.txt
+CMake executable not found: /usr/local/bin/cmake Configure Disable profile
