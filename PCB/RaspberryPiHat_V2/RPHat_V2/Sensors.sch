@@ -36,7 +36,7 @@ F 3 "http://www.invensense.com/wp-content/uploads/2016/06/DS-000189-ICM-20948-v1
 	1    0    0    -1  
 $EndComp
 $Comp
-L User_Created:GY-NEO6MV2 U?
+L RPHat_V2-rescue:GY-NEO6MV2-User_Created U?
 U 1 1 60929062
 P 10400 1350
 F 0 "U?" H 10778 1388 50  0000 L CNN
@@ -435,7 +435,7 @@ Wire Wire Line
 Wire Wire Line
 	2900 2000 3650 2000
 $Comp
-L TXB0108YZPR2:TXB0108YZPR2 IC?
+L RPHat_V2-rescue:TXB0108YZPR2-TXB0108YZPR2 IC?
 U 1 1 60A9D2C1
 P 6450 3800
 F 0 "IC?" H 7000 4065 50  0000 C CNN
@@ -453,4 +453,89 @@ F 11 "https://www.arrow.com/en/products/txb0108yzpr2/texas-instruments" H 7400 3
 	1    6450 3800
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+1V8 #PWR?
+U 1 1 609C23EB
+P 8100 3800
+F 0 "#PWR?" H 8100 3650 50  0001 C CNN
+F 1 "+1V8" H 8115 3973 50  0000 C CNN
+F 2 "" H 8100 3800 50  0001 C CNN
+F 3 "" H 8100 3800 50  0001 C CNN
+	1    8100 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 609C3DE0
+P 5600 4500
+F 0 "#PWR?" H 5600 4350 50  0001 C CNN
+F 1 "+3V3" H 5615 4673 50  0000 C CNN
+F 2 "" H 5600 4500 50  0001 C CNN
+F 3 "" H 5600 4500 50  0001 C CNN
+	1    5600 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 4600 5600 4500
+Wire Wire Line
+	8100 3900 8100 3800
+$Comp
+L power:GNDREF #PWR?
+U 1 1 609C7438
+P 8100 4050
+F 0 "#PWR?" H 8100 3800 50  0001 C CNN
+F 1 "GNDREF" H 8105 3877 50  0001 C CNN
+F 2 "" H 8100 4050 50  0001 C CNN
+F 3 "" H 8100 4050 50  0001 C CNN
+	1    8100 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 4000 8100 4050
+Wire Wire Line
+	7550 3900 8100 3900
+Wire Wire Line
+	7550 4000 8100 4000
+Text GLabel 6350 4000 0    50   Input ~ 0
+SPI_MISO_18
+Text GLabel 6350 4100 0    50   Input ~ 0
+SPI_MOSI_18
+Text GLabel 6350 4400 0    50   Input ~ 0
+SPI_CLK_18
+Text GLabel 6350 4500 0    50   Input ~ 0
+IMU_CS_18
+Text GLabel 7600 3800 2    50   Input ~ 0
+BME_CS_18
+Text GLabel 6350 3900 0    50   Input ~ 0
+SPI_MISO_33
+Text GLabel 6350 3800 0    50   Input ~ 0
+SPI_MOSI_33
+Text GLabel 6350 4300 0    50   Input ~ 0
+SPI_CLK_33
+Text GLabel 6350 4200 0    50   Input ~ 0
+IMU_CS_33
+Text GLabel 6350 4700 0    50   Input ~ 0
+BME_CS_33
+Wire Wire Line
+	5600 4600 6450 4600
+Wire Wire Line
+	7600 3800 7550 3800
+Wire Wire Line
+	6350 4000 6450 4000
+Wire Wire Line
+	6350 4100 6450 4100
+Wire Wire Line
+	6350 4400 6450 4400
+Wire Wire Line
+	6350 4500 6450 4500
+Wire Wire Line
+	6350 3800 6450 3800
+Wire Wire Line
+	6350 3900 6450 3900
+Wire Wire Line
+	6350 4200 6450 4200
+Wire Wire Line
+	6350 4300 6450 4300
+Wire Wire Line
+	6350 4700 6450 4700
 $EndSCHEMATC

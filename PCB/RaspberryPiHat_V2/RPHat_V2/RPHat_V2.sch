@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L RPMB5.0-3.0:RPMB5.0-3.0 PS?
+L RPHat_V2-rescue:RPMB5.0-3.0-RPMB5.0-3.0 PS?
 U 1 1 608338A4
 P 2200 1250
 F 0 "PS?" H 2850 1515 50  0000 C CNN
@@ -33,7 +33,7 @@ F 11 "https://www.mouser.co.uk/ProductDetail/RECOM-Power/RPMB50-30?qs=wnTfsH77Xs
 	1    0    0    -1  
 $EndComp
 $Comp
-L teensy:Teensy4.0 U?
+L RPHat_V2-rescue:Teensy4.0-teensy U?
 U 1 1 608349BD
 P 8050 2350
 F 0 "U?" H 8050 3965 50  0000 C CNN
