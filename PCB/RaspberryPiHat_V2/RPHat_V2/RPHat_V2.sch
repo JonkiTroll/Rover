@@ -497,4 +497,49 @@ U 609A082B
 F0 "servos and motors" 50
 F1 "Servos_Motors.sch" 50
 $EndSheet
+Text GLabel 3850 6250 2    50   Input ~ 0
+PWM_Right
+Text GLabel 3850 5750 2    50   Input ~ 0
+PWM_Left
+Wire Wire Line
+	3850 5750 3650 5750
+Wire Wire Line
+	3850 6250 3650 6250
+$Comp
+L Device:Battery BT?
+U 1 1 60A0D572
+P 850 3350
+F 0 "BT?" H 958 3396 50  0000 L CNN
+F 1 "Battery" H 958 3305 50  0000 L CNN
+F 2 "Connector_PinSocket_2.00mm:PinSocket_1x02_P2.00mm_Vertical" V 850 3410 50  0001 C CNN
+F 3 "~" V 850 3410 50  0001 C CNN
+	1    850  3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 60A138F9
+P 850 3000
+F 0 "#PWR?" H 850 2850 50  0001 C CNN
+F 1 "+BATT" H 865 3173 50  0000 C CNN
+F 2 "" H 850 3000 50  0001 C CNN
+F 3 "" H 850 3000 50  0001 C CNN
+	1    850  3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  3150 850  3000
+$Comp
+L power:GNDREF #PWR?
+U 1 1 60A18EAA
+P 850 3700
+F 0 "#PWR?" H 850 3450 50  0001 C CNN
+F 1 "GNDREF" H 855 3527 50  0000 C CNN
+F 2 "" H 850 3700 50  0001 C CNN
+F 3 "" H 850 3700 50  0001 C CNN
+	1    850  3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  3550 850  3700
 $EndSCHEMATC

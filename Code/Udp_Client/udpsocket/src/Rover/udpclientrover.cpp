@@ -1,5 +1,6 @@
 
 #include "udpClientClass.h"
+#include "circBuffer.h"
 #include "iostream"
 #include <stdlib.h>
 #include <string>
@@ -13,6 +14,7 @@
 
 using namespace std;
 
+circBuffer<std::string> uartBuffer(12);
 
 void Text2Speech(char* message)
 {

@@ -1,7 +1,7 @@
 #Raspberry pi Cmake file. Any config changes specific to the Raspberry pi code
 #should be placed here and nowhere else.
 
-add_executable(udpclientrover udpclientrover.cpp ../../lib/src/udpClientClass.cpp)
+add_executable(udpclientrover udpclientrover.cpp ../../lib/src/udpClientClass.cpp ../../lib/src/circBuffer.cpp)
 
 find_library(wiringPi_LIB wiringPi)
 
