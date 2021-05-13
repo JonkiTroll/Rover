@@ -497,14 +497,14 @@ U 609A082B
 F0 "servos and motors" 50
 F1 "Servos_Motors.sch" 50
 $EndSheet
-Text GLabel 3850 6250 2    50   Input ~ 0
+Text GLabel 6750 1600 0    50   Input ~ 0
 PWM_Right
-Text GLabel 3850 5750 2    50   Input ~ 0
+Text GLabel 6750 2000 0    50   Input ~ 0
 PWM_Left
 Wire Wire Line
-	3850 5750 3650 5750
+	6750 2000 6950 2000
 Wire Wire Line
-	3850 6250 3650 6250
+	6750 1600 6950 1600
 $Comp
 L Device:Battery BT?
 U 1 1 60A0D572
@@ -529,17 +529,37 @@ F 3 "" H 850 3000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	850  3150 850  3000
+Text GLabel 3800 6250 2    50   Input ~ 0
+SPI_MISO_33
+Text GLabel 3800 6350 2    50   Input ~ 0
+SPI_MOSI_33
+Text GLabel 3800 6450 2    50   Input ~ 0
+SPI_CLK_33
+Text GLabel 3750 6650 2    50   Input ~ 0
+IMU_CS_33
+Text GLabel 3750 6750 2    50   Input ~ 0
+BME_CS_33
+Wire Wire Line
+	3800 6250 3650 6250
+Wire Wire Line
+	3800 6350 3650 6350
+Wire Wire Line
+	3800 6450 3650 6450
+Wire Wire Line
+	3750 6650 3650 6650
+Wire Wire Line
+	3750 6750 3650 6750
 $Comp
-L power:GNDREF #PWR?
-U 1 1 60A18EAA
-P 850 3700
-F 0 "#PWR?" H 850 3450 50  0001 C CNN
-F 1 "GNDREF" H 855 3527 50  0000 C CNN
-F 2 "" H 850 3700 50  0001 C CNN
-F 3 "" H 850 3700 50  0001 C CNN
-	1    850  3700
-	1    0    0    -1  
+L power:-BATT #PWR?
+U 1 1 60A01C3B
+P 850 3800
+F 0 "#PWR?" H 850 3650 50  0001 C CNN
+F 1 "-BATT" H 865 3973 50  0000 C CNN
+F 2 "" H 850 3800 50  0001 C CNN
+F 3 "" H 850 3800 50  0001 C CNN
+	1    850  3800
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	850  3550 850  3700
+	850  3550 850  3800
 $EndSCHEMATC

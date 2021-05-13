@@ -538,4 +538,63 @@ Wire Wire Line
 	6350 4300 6450 4300
 Wire Wire Line
 	6350 4700 6450 4700
+$Comp
+L BQ34110PW:BQ34110PW IC?
+U 1 1 609EAECE
+P 3150 5450
+F 0 "IC?" H 3850 5715 50  0000 C CNN
+F 1 "BQ34110PW" H 3850 5624 50  0000 C CNN
+F 2 "SOP65P640X120-14N" H 4400 5550 50  0001 L CNN
+F 3 "http://www.ti.com/lit/gpn/bq34110" H 4400 5450 50  0001 L CNN
+F 4 "Battery Management Multi-Chemistry High-cell Count Battery Fuel Gauge w/Integrated Rarely Discharged Module 14-TSSOP -40 to 85" H 4400 5350 50  0001 L CNN "Description"
+F 5 "1.2" H 4400 5250 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 4400 5150 50  0001 L CNN "Manufacturer_Name"
+F 7 "BQ34110PW" H 4400 5050 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "595-BQ34110PW" H 4400 4950 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/BQ34110PW?qs=OEYMhS7p3YbAd6vB%252BTGmNQ%3D%3D" H 4400 4850 50  0001 L CNN "Mouser Price/Stock"
+F 10 "BQ34110PW" H 4400 4750 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/bq34110pw/texas-instruments" H 4400 4650 50  0001 L CNN "Arrow Price/Stock"
+	1    3150 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 609ED767
+P 5000 5900
+F 0 "R?" H 5070 5946 50  0000 L CNN
+F 1 "10m" H 5070 5855 50  0000 L CNN
+F 2 "" V 4930 5900 50  0001 C CNN
+F 3 "~" H 5000 5900 50  0001 C CNN
+	1    5000 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 5850 4750 5850
+Wire Wire Line
+	4750 5850 4750 5750
+Wire Wire Line
+	4750 5750 5000 5750
+Wire Wire Line
+	5000 6050 4750 6050
+Wire Wire Line
+	4750 6050 4750 5950
+Wire Wire Line
+	4750 5950 4550 5950
+Wire Wire Line
+	4550 6050 4750 6050
+Connection ~ 4750 6050
+$Comp
+L power:GNDREF #PWR?
+U 1 1 609F7B72
+P 5000 6150
+F 0 "#PWR?" H 5000 5900 50  0001 C CNN
+F 1 "GNDREF" H 5005 5977 50  0001 C CNN
+F 2 "" H 5000 6150 50  0001 C CNN
+F 3 "" H 5000 6150 50  0001 C CNN
+	1    5000 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 6050 5000 6150
+Connection ~ 5000 6050
 $EndSCHEMATC

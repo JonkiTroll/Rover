@@ -36,7 +36,7 @@ F 3 "http://www.invensense.com/wp-content/uploads/2016/06/DS-000189-ICM-20948-v1
 	1    0    0    -1  
 $EndComp
 $Comp
-L User_Created:GY-NEO6MV2 U?
+L RPHat_V2-rescue:GY-NEO6MV2-User_Created U?
 U 1 1 60929062
 P 10400 1350
 F 0 "U?" H 10778 1388 50  0000 L CNN
@@ -435,7 +435,7 @@ Wire Wire Line
 Wire Wire Line
 	2900 2000 3650 2000
 $Comp
-L TXB0108YZPR2:TXB0108YZPR2 IC?
+L RPHat_V2-rescue:TXB0108YZPR2-TXB0108YZPR2 IC?
 U 1 1 60A9D2C1
 P 6450 3800
 F 0 "IC?" H 7000 4065 50  0000 C CNN
@@ -453,4 +453,148 @@ F 11 "https://www.arrow.com/en/products/txb0108yzpr2/texas-instruments" H 7400 3
 	1    6450 3800
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+1V8 #PWR?
+U 1 1 609C23EB
+P 8100 3800
+F 0 "#PWR?" H 8100 3650 50  0001 C CNN
+F 1 "+1V8" H 8115 3973 50  0000 C CNN
+F 2 "" H 8100 3800 50  0001 C CNN
+F 3 "" H 8100 3800 50  0001 C CNN
+	1    8100 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 609C3DE0
+P 5600 4500
+F 0 "#PWR?" H 5600 4350 50  0001 C CNN
+F 1 "+3V3" H 5615 4673 50  0000 C CNN
+F 2 "" H 5600 4500 50  0001 C CNN
+F 3 "" H 5600 4500 50  0001 C CNN
+	1    5600 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 4600 5600 4500
+Wire Wire Line
+	8100 3900 8100 3800
+$Comp
+L power:GNDREF #PWR?
+U 1 1 609C7438
+P 8100 4050
+F 0 "#PWR?" H 8100 3800 50  0001 C CNN
+F 1 "GNDREF" H 8105 3877 50  0001 C CNN
+F 2 "" H 8100 4050 50  0001 C CNN
+F 3 "" H 8100 4050 50  0001 C CNN
+	1    8100 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 4000 8100 4050
+Wire Wire Line
+	7550 3900 8100 3900
+Wire Wire Line
+	7550 4000 8100 4000
+Text GLabel 6350 4000 0    50   Input ~ 0
+SPI_MISO_18
+Text GLabel 6350 4100 0    50   Input ~ 0
+SPI_MOSI_18
+Text GLabel 6350 4400 0    50   Input ~ 0
+SPI_CLK_18
+Text GLabel 6350 4500 0    50   Input ~ 0
+IMU_CS_18
+Text GLabel 7600 3800 2    50   Input ~ 0
+BME_CS_18
+Text GLabel 6350 3900 0    50   Input ~ 0
+SPI_MISO_33
+Text GLabel 6350 3800 0    50   Input ~ 0
+SPI_MOSI_33
+Text GLabel 6350 4300 0    50   Input ~ 0
+SPI_CLK_33
+Text GLabel 6350 4200 0    50   Input ~ 0
+IMU_CS_33
+Text GLabel 6350 4700 0    50   Input ~ 0
+BME_CS_33
+Wire Wire Line
+	5600 4600 6450 4600
+Wire Wire Line
+	7600 3800 7550 3800
+Wire Wire Line
+	6350 4000 6450 4000
+Wire Wire Line
+	6350 4100 6450 4100
+Wire Wire Line
+	6350 4400 6450 4400
+Wire Wire Line
+	6350 4500 6450 4500
+Wire Wire Line
+	6350 3800 6450 3800
+Wire Wire Line
+	6350 3900 6450 3900
+Wire Wire Line
+	6350 4200 6450 4200
+Wire Wire Line
+	6350 4300 6450 4300
+Wire Wire Line
+	6350 4700 6450 4700
+$Comp
+L BQ34110PW:BQ34110PW IC?
+U 1 1 609EAECE
+P 3150 5450
+F 0 "IC?" H 3850 5715 50  0000 C CNN
+F 1 "BQ34110PW" H 3850 5624 50  0000 C CNN
+F 2 "SOP65P640X120-14N" H 4400 5550 50  0001 L CNN
+F 3 "http://www.ti.com/lit/gpn/bq34110" H 4400 5450 50  0001 L CNN
+F 4 "Battery Management Multi-Chemistry High-cell Count Battery Fuel Gauge w/Integrated Rarely Discharged Module 14-TSSOP -40 to 85" H 4400 5350 50  0001 L CNN "Description"
+F 5 "1.2" H 4400 5250 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 4400 5150 50  0001 L CNN "Manufacturer_Name"
+F 7 "BQ34110PW" H 4400 5050 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "595-BQ34110PW" H 4400 4950 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/BQ34110PW?qs=OEYMhS7p3YbAd6vB%252BTGmNQ%3D%3D" H 4400 4850 50  0001 L CNN "Mouser Price/Stock"
+F 10 "BQ34110PW" H 4400 4750 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/bq34110pw/texas-instruments" H 4400 4650 50  0001 L CNN "Arrow Price/Stock"
+	1    3150 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 609ED767
+P 5000 5900
+F 0 "R?" H 5070 5946 50  0000 L CNN
+F 1 "10m" H 5070 5855 50  0000 L CNN
+F 2 "" V 4930 5900 50  0001 C CNN
+F 3 "~" H 5000 5900 50  0001 C CNN
+	1    5000 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 5850 4750 5850
+Wire Wire Line
+	4750 5850 4750 5750
+Wire Wire Line
+	4750 5750 5000 5750
+Wire Wire Line
+	5000 6050 4750 6050
+Wire Wire Line
+	4750 6050 4750 5950
+Wire Wire Line
+	4750 5950 4550 5950
+$Comp
+L power:GNDREF #PWR?
+U 1 1 609F7B72
+P 5000 6150
+F 0 "#PWR?" H 5000 5900 50  0001 C CNN
+F 1 "GNDREF" H 5005 5977 50  0001 C CNN
+F 2 "" H 5000 6150 50  0001 C CNN
+F 3 "" H 5000 6150 50  0001 C CNN
+	1    5000 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 6050 4750 6050
+Connection ~ 4750 6050
+Wire Wire Line
+	5000 6050 5000 6150
+Connection ~ 5000 6050
 $EndSCHEMATC
