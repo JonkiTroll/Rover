@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
-Title ""
-Date ""
-Rev ""
+Title "Hall effect subcircuit"
+Date "2021-05-15"
+Rev "0.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -17,8 +17,8 @@ $Comp
 L Sensor_Magnetic:AH1806-P U?
 U 1 1 6098D710
 P 1800 1400
-F 0 "U?" H 1570 1446 50  0000 R CNN
-F 1 "AH1806-P" H 1570 1355 50  0000 R CNN
+F 0 "U?" H 1570 1654 50  0000 R CNN
+F 1 "AH1806-P" H 1570 1575 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1800 1400 50  0001 C CNN
 F 3 "https://www.diodes.com/assets/Datasheets/AH1806.pdf" H 1800 1400 50  0001 C CNN
 	1    1800 1400
@@ -29,7 +29,7 @@ L power:GNDREF #PWR?
 U 1 1 6098DD81
 P 1800 2000
 F 0 "#PWR?" H 1800 1750 50  0001 C CNN
-F 1 "GNDREF" H 1805 1827 50  0000 C CNN
+F 1 "GNDREF" H 1805 1827 50  0001 C CNN
 F 2 "" H 1800 2000 50  0001 C CNN
 F 3 "" H 1800 2000 50  0001 C CNN
 	1    1800 2000
@@ -116,7 +116,7 @@ L power:GNDREF #PWR?
 U 1 1 60991611
 P 2850 1750
 F 0 "#PWR?" H 2850 1500 50  0001 C CNN
-F 1 "GNDREF" V 2855 1622 50  0000 R CNN
+F 1 "GNDREF" V 2855 1622 50  0001 R CNN
 F 2 "" H 2850 1750 50  0001 C CNN
 F 3 "" H 2850 1750 50  0001 C CNN
 	1    2850 1750
