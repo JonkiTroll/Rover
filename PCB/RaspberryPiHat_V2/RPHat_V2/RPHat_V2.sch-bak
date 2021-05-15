@@ -47,8 +47,8 @@ $Comp
 L Connector:Raspberry_Pi_2_3 J?
 U 1 1 608367C5
 P 2850 5950
-F 0 "J?" H 2850 7431 50  0000 C CNN
-F 1 "Raspberry_Pi_2_3" H 2850 7340 50  0000 C CNN
+F 0 "J?" H 2165 7431 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 2165 7340 50  0000 C CNN
 F 2 "" H 2850 5950 50  0001 C CNN
 F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 2850 5950 50  0001 C CNN
 	1    2850 5950
@@ -120,7 +120,7 @@ L power:GNDREF #PWR?
 U 1 1 6085D5E0
 P 800 1650
 F 0 "#PWR?" H 800 1400 50  0001 C CNN
-F 1 "GNDREF" H 805 1477 50  0000 C CNN
+F 1 "GNDREF" H 805 1477 50  0001 C CNN
 F 2 "" H 800 1650 50  0001 C CNN
 F 3 "" H 800 1650 50  0001 C CNN
 	1    800  1650
@@ -131,7 +131,7 @@ L power:GNDREF #PWR?
 U 1 1 6085DEB3
 P 1100 1650
 F 0 "#PWR?" H 1100 1400 50  0001 C CNN
-F 1 "GNDREF" H 1105 1477 50  0000 C CNN
+F 1 "GNDREF" H 1105 1477 50  0001 C CNN
 F 2 "" H 1100 1650 50  0001 C CNN
 F 3 "" H 1100 1650 50  0001 C CNN
 	1    1100 1650
@@ -142,7 +142,7 @@ L power:GNDREF #PWR?
 U 1 1 6085E1F0
 P 1400 1650
 F 0 "#PWR?" H 1400 1400 50  0001 C CNN
-F 1 "GNDREF" H 1405 1477 50  0000 C CNN
+F 1 "GNDREF" H 1405 1477 50  0001 C CNN
 F 2 "" H 1400 1650 50  0001 C CNN
 F 3 "" H 1400 1650 50  0001 C CNN
 	1    1400 1650
@@ -189,17 +189,6 @@ Wire Wire Line
 Connection ~ 1400 1250
 Wire Wire Line
 	1400 1250 1100 1250
-$Comp
-L power:+BATT #PWR?
-U 1 1 60864789
-P 800 1050
-F 0 "#PWR?" H 800 900 50  0001 C CNN
-F 1 "+BATT" H 815 1223 50  0000 C CNN
-F 2 "" H 800 1050 50  0001 C CNN
-F 3 "" H 800 1050 50  0001 C CNN
-	1    800  1050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	800  1050 800  1250
 Connection ~ 800  1250
@@ -213,23 +202,21 @@ Wire Wire Line
 $Comp
 L power:GNDREF #PWR?
 U 1 1 60862A63
-P 1850 1600
-F 0 "#PWR?" H 1850 1350 50  0001 C CNN
-F 1 "GNDREF" H 1855 1427 50  0000 C CNN
-F 2 "" H 1850 1600 50  0001 C CNN
-F 3 "" H 1850 1600 50  0001 C CNN
-	1    1850 1600
+P 1800 1600
+F 0 "#PWR?" H 1800 1350 50  0001 C CNN
+F 1 "GNDREF" H 1805 1427 50  0001 C CNN
+F 2 "" H 1800 1600 50  0001 C CNN
+F 3 "" H 1800 1600 50  0001 C CNN
+	1    1800 1600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 1550 1850 1600
+	1800 1550 1800 1600
 Wire Wire Line
 	2200 1450 2200 1550
 Wire Wire Line
 	2200 1550 2000 1550
 Connection ~ 2200 1550
-Wire Wire Line
-	2000 1550 1850 1550
 Connection ~ 2000 1550
 $Comp
 L power:+5V #PWR?
@@ -262,7 +249,7 @@ L power:GNDREF #PWR?
 U 1 1 60871C04
 P 1800 2100
 F 0 "#PWR?" H 1800 1850 50  0001 C CNN
-F 1 "GNDREF" H 1805 1927 50  0000 C CNN
+F 1 "GNDREF" H 1805 1927 50  0001 C CNN
 F 2 "" H 1800 2100 50  0001 C CNN
 F 3 "" H 1800 2100 50  0001 C CNN
 	1    1800 2100
@@ -294,7 +281,7 @@ L power:GNDREF #PWR?
 U 1 1 60875D28
 P 2000 2500
 F 0 "#PWR?" H 2000 2250 50  0001 C CNN
-F 1 "GNDREF" H 2005 2327 50  0000 C CNN
+F 1 "GNDREF" H 2005 2327 50  0001 C CNN
 F 2 "" H 2000 2500 50  0001 C CNN
 F 3 "" H 2000 2500 50  0001 C CNN
 	1    2000 2500
@@ -314,7 +301,7 @@ L power:GNDREF #PWR?
 U 1 1 6087C04F
 P 3850 2450
 F 0 "#PWR?" H 3850 2200 50  0001 C CNN
-F 1 "GNDREF" H 3855 2277 50  0000 C CNN
+F 1 "GNDREF" H 3855 2277 50  0001 C CNN
 F 2 "" H 3850 2450 50  0001 C CNN
 F 3 "" H 3850 2450 50  0001 C CNN
 	1    3850 2450
@@ -406,7 +393,7 @@ L Device:R R?
 U 1 1 60890E09
 P 9600 3800
 F 0 "R?" H 9670 3846 50  0000 L CNN
-F 1 "R" H 9670 3755 50  0000 L CNN
+F 1 "4.7k" H 9670 3755 50  0000 L CNN
 F 2 "" V 9530 3800 50  0001 C CNN
 F 3 "~" H 9600 3800 50  0001 C CNN
 	1    9600 3800
@@ -419,7 +406,7 @@ L power:GNDREF #PWR?
 U 1 1 6089275F
 P 9600 4000
 F 0 "#PWR?" H 9600 3750 50  0001 C CNN
-F 1 "GNDREF" H 9605 3827 50  0000 C CNN
+F 1 "GNDREF" H 9605 3827 50  0001 C CNN
 F 2 "" H 9600 4000 50  0001 C CNN
 F 3 "" H 9600 4000 50  0001 C CNN
 	1    9600 4000
@@ -497,14 +484,14 @@ U 609A082B
 F0 "servos and motors" 50
 F1 "Servos_Motors.sch" 50
 $EndSheet
-Text GLabel 6750 1600 0    50   Input ~ 0
+Text GLabel 6750 1300 0    50   Input ~ 0
 PWM_Right
-Text GLabel 6750 2000 0    50   Input ~ 0
+Text GLabel 6750 1400 0    50   Input ~ 0
 PWM_Left
 Wire Wire Line
-	6750 2000 6950 2000
+	6750 1400 6950 1400
 Wire Wire Line
-	6750 1600 6950 1600
+	6750 1300 6950 1300
 $Comp
 L Device:Battery BT?
 U 1 1 60A0D572
@@ -535,9 +522,9 @@ Text GLabel 3800 6350 2    50   Input ~ 0
 SPI_MOSI_33
 Text GLabel 3800 6450 2    50   Input ~ 0
 SPI_CLK_33
-Text GLabel 3750 6650 2    50   Input ~ 0
+Text GLabel 1950 6250 0    50   Input ~ 0
 IMU_CS_33
-Text GLabel 3750 6750 2    50   Input ~ 0
+Text GLabel 1950 6150 0    50   Input ~ 0
 BME_CS_33
 Wire Wire Line
 	3800 6250 3650 6250
@@ -546,20 +533,207 @@ Wire Wire Line
 Wire Wire Line
 	3800 6450 3650 6450
 Wire Wire Line
-	3750 6650 3650 6650
+	1950 6250 2050 6250
 Wire Wire Line
-	3750 6750 3650 6750
+	1950 6150 2050 6150
+Wire Wire Line
+	850  3550 850  3800
 $Comp
-L power:-BATT #PWR?
-U 1 1 60A01C3B
+L power:VCC #PWR?
+U 1 1 60A65488
+P 800 1050
+AR Path="/6092276E/60A65488" Ref="#PWR?"  Part="1" 
+AR Path="/60A65488" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 800 900 50  0001 C CNN
+F 1 "VCC" H 815 1223 50  0000 C CNN
+F 2 "" H 800 1050 50  0001 C CNN
+F 3 "" H 800 1050 50  0001 C CNN
+	1    800  1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 60A67F58
 P 850 3800
-F 0 "#PWR?" H 850 3650 50  0001 C CNN
-F 1 "-BATT" H 865 3973 50  0000 C CNN
+F 0 "#PWR?" H 850 3550 50  0001 C CNN
+F 1 "GNDREF" H 855 3627 50  0001 C CNN
 F 2 "" H 850 3800 50  0001 C CNN
 F 3 "" H 850 3800 50  0001 C CNN
 	1    850  3800
-	-1   0    0    1   
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60A6AEA9
+P 2650 4500
+F 0 "#PWR?" H 2650 4350 50  0001 C CNN
+F 1 "+5V" V 2665 4628 50  0000 L CNN
+F 2 "" H 2650 4500 50  0001 C CNN
+F 3 "" H 2650 4500 50  0001 C CNN
+	1    2650 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60A6C4F6
+P 2950 4500
+F 0 "#PWR?" H 2950 4350 50  0001 C CNN
+F 1 "+3V3" H 2965 4673 50  0000 C CNN
+F 2 "" H 2950 4500 50  0001 C CNN
+F 3 "" H 2950 4500 50  0001 C CNN
+	1    2950 4500
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	850  3550 850  3800
+	2650 4500 2650 4600
+Wire Wire Line
+	2650 4600 2750 4600
+Wire Wire Line
+	2750 4600 2750 4650
+Connection ~ 2650 4600
+Wire Wire Line
+	2650 4600 2650 4650
+Wire Wire Line
+	2950 4500 2950 4600
+Wire Wire Line
+	2950 4600 3050 4600
+Connection ~ 2950 4600
+Wire Wire Line
+	2950 4600 2950 4650
+$Comp
+L power:GNDREF #PWR?
+U 1 1 60A746A9
+P 2850 7400
+F 0 "#PWR?" H 2850 7150 50  0001 C CNN
+F 1 "GNDREF" H 2855 7227 50  0001 C CNN
+F 2 "" H 2850 7400 50  0001 C CNN
+F 3 "" H 2850 7400 50  0001 C CNN
+	1    2850 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 7250 2450 7400
+Wire Wire Line
+	3150 7250 3150 7400
+Wire Wire Line
+	3150 7400 3050 7400
+Connection ~ 2850 7400
+Wire Wire Line
+	2850 7250 2850 7400
+Wire Wire Line
+	2950 7250 2950 7400
+Connection ~ 2950 7400
+Wire Wire Line
+	2950 7400 2850 7400
+Wire Wire Line
+	3050 7250 3050 7400
+Connection ~ 3050 7400
+Wire Wire Line
+	3050 7400 2950 7400
+Wire Wire Line
+	2750 7250 2750 7400
+Connection ~ 2750 7400
+Wire Wire Line
+	2750 7400 2850 7400
+Wire Wire Line
+	2650 7250 2650 7400
+Wire Wire Line
+	2450 7400 2550 7400
+Connection ~ 2650 7400
+Wire Wire Line
+	2650 7400 2750 7400
+Wire Wire Line
+	2550 7250 2550 7400
+Connection ~ 2550 7400
+Wire Wire Line
+	2550 7400 2650 7400
+Text GLabel 4450 5350 2    50   Input ~ 0
+SDA
+Text GLabel 4450 5450 2    50   Input ~ 0
+SCL
+$Comp
+L Device:R R?
+U 1 1 60A92742
+P 4000 5100
+AR Path="/6092276E/60A92742" Ref="R?"  Part="1" 
+AR Path="/60A92742" Ref="R?"  Part="1" 
+F 0 "R?" H 4070 5146 50  0000 L CNN
+F 1 "TBU" H 4070 5055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3930 5100 50  0001 C CNN
+F 3 "~" H 4000 5100 50  0001 C CNN
+	1    4000 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60A95088
+P 4300 5100
+AR Path="/6092276E/60A95088" Ref="R?"  Part="1" 
+AR Path="/60A95088" Ref="R?"  Part="1" 
+F 0 "R?" H 4370 5146 50  0000 L CNN
+F 1 "TBU" H 4370 5055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4230 5100 50  0001 C CNN
+F 3 "~" H 4300 5100 50  0001 C CNN
+	1    4300 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 5350 4000 5350
+Wire Wire Line
+	3650 5450 4300 5450
+Wire Wire Line
+	4300 5250 4300 5450
+Connection ~ 4300 5450
+Wire Wire Line
+	4300 5450 4450 5450
+Wire Wire Line
+	4000 5250 4000 5350
+Connection ~ 4000 5350
+Wire Wire Line
+	4000 5350 4450 5350
+Wire Wire Line
+	3050 4600 3050 4650
+Wire Wire Line
+	4300 4950 4300 4600
+Wire Wire Line
+	4300 4600 4000 4600
+Connection ~ 3050 4600
+Wire Wire Line
+	4000 4950 4000 4600
+Connection ~ 4000 4600
+Wire Wire Line
+	4000 4600 3050 4600
+Text Notes 3600 4500 0    50   ~ 0
+Pullups need to be calculated based \non slva689 application note from \ntexas instruments\n
+Text GLabel 6750 1500 0    50   Input ~ 0
+PWMservo_1
+Text GLabel 9300 2500 2    50   Input ~ 0
+Neopixels_1
+Text GLabel 6750 1600 0    50   Input ~ 0
+PWMservo_2
+Text GLabel 6750 1700 0    50   Input ~ 0
+PWMservo_3
+Text GLabel 6750 1800 0    50   Input ~ 0
+PWMservo_4
+Text GLabel 6750 1900 0    50   Input ~ 0
+PWMservo_5
+Text GLabel 6750 2000 0    50   Input ~ 0
+PWMservo_6
+Text GLabel 9300 2400 2    50   Input ~ 0
+Neopixels_2
+$Comp
+L power:GNDREF #PWR?
+U 1 1 60ADCEA9
+P 6850 1000
+F 0 "#PWR?" H 6850 750 50  0001 C CNN
+F 1 "GNDREF" H 6855 827 50  0001 C CNN
+F 2 "" H 6850 1000 50  0001 C CNN
+F 3 "" H 6850 1000 50  0001 C CNN
+	1    6850 1000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 1000 6850 1000
+Wire Wire Line
+	1800 1550 2000 1550
 $EndSCHEMATC

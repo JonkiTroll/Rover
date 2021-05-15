@@ -538,63 +538,178 @@ Wire Wire Line
 	6350 4300 6450 4300
 Wire Wire Line
 	6350 4700 6450 4700
+Text GLabel 4700 5850 2    50   Input ~ 0
+SDA
+Text GLabel 4700 5950 2    50   Input ~ 0
+SCL
+Wire Wire Line
+	4700 5850 4400 5850
+Wire Wire Line
+	4400 5950 4700 5950
 $Comp
-L BQ34110PW:BQ34110PW IC?
-U 1 1 609EAECE
-P 3150 5450
-F 0 "IC?" H 3850 5715 50  0000 C CNN
-F 1 "BQ34110PW" H 3850 5624 50  0000 C CNN
-F 2 "SOP65P640X120-14N" H 4400 5550 50  0001 L CNN
-F 3 "http://www.ti.com/lit/gpn/bq34110" H 4400 5450 50  0001 L CNN
-F 4 "Battery Management Multi-Chemistry High-cell Count Battery Fuel Gauge w/Integrated Rarely Discharged Module 14-TSSOP -40 to 85" H 4400 5350 50  0001 L CNN "Description"
-F 5 "1.2" H 4400 5250 50  0001 L CNN "Height"
-F 6 "Texas Instruments" H 4400 5150 50  0001 L CNN "Manufacturer_Name"
-F 7 "BQ34110PW" H 4400 5050 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "595-BQ34110PW" H 4400 4950 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/BQ34110PW?qs=OEYMhS7p3YbAd6vB%252BTGmNQ%3D%3D" H 4400 4850 50  0001 L CNN "Mouser Price/Stock"
-F 10 "BQ34110PW" H 4400 4750 50  0001 L CNN "Arrow Part Number"
-F 11 "https://www.arrow.com/en/products/bq34110pw/texas-instruments" H 4400 4650 50  0001 L CNN "Arrow Price/Stock"
-	1    3150 5450
+L power:GNDREF #PWR?
+U 1 1 60A1DE54
+P 4000 6550
+F 0 "#PWR?" H 4000 6300 50  0001 C CNN
+F 1 "GNDREF" H 4005 6377 50  0001 C CNN
+F 2 "" H 4000 6550 50  0001 C CNN
+F 3 "" H 4000 6550 50  0001 C CNN
+	1    4000 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog_ADC:INA219AxD U?
+U 1 1 60A1725E
+P 4000 6050
+F 0 "U?" H 3543 6631 50  0000 C CNN
+F 1 "INA219AxD" H 3543 6540 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4800 5700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ina219.pdf" H 4350 5950 50  0001 C CNN
+	1    4000 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60A1ED8C
+P 4250 5350
+F 0 "C?" H 4365 5396 50  0000 L CNN
+F 1 "C" H 4365 5305 50  0000 L CNN
+F 2 "" H 4288 5200 50  0001 C CNN
+F 3 "~" H 4250 5350 50  0001 C CNN
+	1    4250 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60A2003A
+P 4000 5000
+F 0 "#PWR?" H 4000 4850 50  0001 C CNN
+F 1 "+3V3" H 4015 5173 50  0000 C CNN
+F 2 "" H 4000 5000 50  0001 C CNN
+F 3 "" H 4000 5000 50  0001 C CNN
+	1    4000 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 5000 4000 5200
+Wire Wire Line
+	4250 5200 4000 5200
+Connection ~ 4000 5200
+Wire Wire Line
+	4000 5200 4000 5650
+$Comp
+L power:GNDREF #PWR?
+U 1 1 60A25263
+P 4250 5550
+F 0 "#PWR?" H 4250 5300 50  0001 C CNN
+F 1 "GNDREF" H 4255 5377 50  0001 C CNN
+F 2 "" H 4250 5550 50  0001 C CNN
+F 3 "" H 4250 5550 50  0001 C CNN
+	1    4250 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 5500 4250 5550
+$Comp
+L Device:R_Shunt R?
+U 1 1 60A2AE3C
+P 2700 6050
+F 0 "R?" H 2612 6096 50  0000 R CNN
+F 1 "R_Shunt" H 2612 6005 50  0000 R CNN
+F 2 "" V 2630 6050 50  0001 C CNN
+F 3 "~" H 2700 6050 50  0001 C CNN
+	1    2700 6050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R?
-U 1 1 609ED767
-P 5000 5900
-F 0 "R?" H 5070 5946 50  0000 L CNN
-F 1 "10m" H 5070 5855 50  0000 L CNN
-F 2 "" V 4930 5900 50  0001 C CNN
-F 3 "~" H 5000 5900 50  0001 C CNN
-	1    5000 5900
-	1    0    0    -1  
+U 1 1 60A32138
+P 3100 5900
+F 0 "R?" V 3307 5900 50  0000 C CNN
+F 1 "0" V 3216 5900 50  0000 C CNN
+F 2 "" V 3030 5900 50  0001 C CNN
+F 3 "~" H 3100 5900 50  0001 C CNN
+	1    3100 5900
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	4550 5850 4750 5850
-Wire Wire Line
-	4750 5850 4750 5750
-Wire Wire Line
-	4750 5750 5000 5750
-Wire Wire Line
-	5000 6050 4750 6050
-Wire Wire Line
-	4750 6050 4750 5950
-Wire Wire Line
-	4750 5950 4550 5950
-Wire Wire Line
-	4550 6050 4750 6050
-Connection ~ 4750 6050
 $Comp
-L power:GNDREF #PWR?
-U 1 1 609F7B72
-P 5000 6150
-F 0 "#PWR?" H 5000 5900 50  0001 C CNN
-F 1 "GNDREF" H 5005 5977 50  0001 C CNN
-F 2 "" H 5000 6150 50  0001 C CNN
-F 3 "" H 5000 6150 50  0001 C CNN
-	1    5000 6150
+L Device:R R?
+U 1 1 60A331B9
+P 3100 6200
+F 0 "R?" V 2981 6200 50  0000 C CNN
+F 1 "0" V 2903 6200 50  0000 C BNN
+F 2 "" V 3030 6200 50  0001 C CNN
+F 3 "~" H 3100 6200 50  0001 C CNN
+	1    3100 6200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60A408CD
+P 3350 6050
+F 0 "C?" H 3465 6096 50  0000 L CNN
+F 1 "DNC" H 3465 6005 50  0000 L CNN
+F 2 "" H 3388 5900 50  0001 C CNN
+F 3 "~" H 3350 6050 50  0001 C CNN
+	1    3350 6050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5000 6050 5000 6150
-Connection ~ 5000 6050
+	2850 6150 2900 6150
+Wire Wire Line
+	2900 6150 2900 6200
+Wire Wire Line
+	2900 6200 2950 6200
+Wire Wire Line
+	2850 5950 2900 5950
+Wire Wire Line
+	2900 5950 2900 5900
+Wire Wire Line
+	2900 5900 2950 5900
+Wire Wire Line
+	3250 5900 3350 5900
+Wire Wire Line
+	3550 5900 3550 5950
+Wire Wire Line
+	3550 5950 3600 5950
+Connection ~ 3350 5900
+Wire Wire Line
+	3350 5900 3550 5900
+Wire Wire Line
+	3250 6200 3350 6200
+Wire Wire Line
+	3550 6200 3550 6150
+Wire Wire Line
+	3550 6150 3600 6150
+Connection ~ 3350 6200
+Wire Wire Line
+	3350 6200 3550 6200
+Wire Wire Line
+	4000 6450 4000 6550
+$Comp
+L power:+BATT #PWR?
+U 1 1 60A576AA
+P 2700 5700
+F 0 "#PWR?" H 2700 5550 50  0001 C CNN
+F 1 "+BATT" H 2715 5873 50  0000 C CNN
+F 2 "" H 2700 5700 50  0001 C CNN
+F 3 "" H 2700 5700 50  0001 C CNN
+	1    2700 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 5700 2700 5850
+$Comp
+L power:VCC #PWR?
+U 1 1 60A5EBF9
+P 2700 6400
+F 0 "#PWR?" H 2700 6250 50  0001 C CNN
+F 1 "VCC" H 2715 6573 50  0000 C CNN
+F 2 "" H 2700 6400 50  0001 C CNN
+F 3 "" H 2700 6400 50  0001 C CNN
+	1    2700 6400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2700 6250 2700 6400
 $EndSCHEMATC
