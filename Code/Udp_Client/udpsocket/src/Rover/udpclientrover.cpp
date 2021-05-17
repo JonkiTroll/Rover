@@ -16,18 +16,25 @@ using namespace std;
 
 circBuffer<std::string> uartBuffer(12);
 
-void Text2Speech(char* message)
+enum Command{
+    SPEED = 's',
+    TEXT = 't',
+    CAMERA = 'c'
+};
+
+
+void Text2Speech(string message)
 {
-    string s(message);
-    string command_string = "echo "+ s + " | festival --tts";
+    message.erase(1,0);
+    string command_string = "echo "+ message + " | festival --tts";
     system(command_string.c_str());
 }
 
-int FindChar(const char arr[], const char char2find)
+int FindChar(const char *arr, const char char2find)
 {
     for (int index = 0; index < sizeof(arr); index++)
     {
-        if (arr[index] == char2find)
+        if (*(arr+index) == char2find)
         {
             return index;
         }
@@ -39,7 +46,7 @@ int FindChar(const char arr[], const char char2find)
  * Sends data over the UART to the Teensy. As of now, it only sends the speed array as the Teensy only controls the PWM to be sent to the ESC.
  * Will need to be updated once servos are added.
  */
-void TransmitUARTThread(int fd, const char sendBuffer[])
+void TransmitUARTThread(int fd, const char *sendBuffer)
 {
     char UARTBuffer[8];
 
@@ -57,11 +64,20 @@ void TransmitUARTThread(int fd, const char sendBuffer[])
         serialPrintf(fd, UARTBuffer);
 }
 
-void ReceiveUDPThread(){}
+void ReceiveUDPThread(udp_client_server::udp_client *Client){
+    char recvBuffer[32];
 
-void TransmitUDPThread(){}
+    while(1) {
+        (*Client).recv(recvBuffer, sizeof(recvBuffer));
+        uartBuffer.put(recvBuffer);
+    }
+}
 
-udp_client_server::udp_client setupUDP(const string IP, const int PORT)
+void TransmitUDPThread(udp_client_server::udp_client& Client){
+
+}
+
+udp_client_server::udp_client setupUDP(const string& IP, const int PORT)
 {
     //int PORT = 8080;
     //const string IP = "127.0.0.1"; //localhost
@@ -79,13 +95,47 @@ udp_client_server::udp_client setupUDP(const string IP, const int PORT)
     return RoverClient;
 }
 
-int setupUART(int baudrate, int& fd)
+int setupUART(int baudrate, int &fd)
 {
     if((fd = serialOpen("/dev/ttyS0",baudrate)) < 0)return 1;
     if(wiringPiSetup() < 0) return 1;
     return 0;
 }
+int main(){
 
+    int fd;
+    string Temp;
+    Command recvCommand;
+
+    udp_client_server::udp_client RoverClient = setupUDP("167.71.138.109", 20001);
+
+    setupUART(57600, fd);
+
+    thread recvT(ReceiveUDPThread, &RoverClient);
+
+    while(true) {
+        Temp = uartBuffer.get();
+        recvCommand = (Command) Temp.at(0);
+
+
+        switch (recvCommand) {
+            case SPEED: {
+                thread uartT(TransmitUARTThread, fd, (Temp.c_str()));
+            }
+            case TEXT: {
+                thread textT(Text2Speech, Temp);
+            }
+            case CAMERA: {
+                //Here goes the camera servo implementation.
+                break;
+            }
+            default:{
+                cout << "Command " << recvCommand << " is not a valid command" << endl;
+            }
+        }
+    }
+}
+/*
 int main() {
 
 
@@ -152,6 +202,6 @@ int main() {
 
         serialClose(fd);
     }
-
+*/
 
 

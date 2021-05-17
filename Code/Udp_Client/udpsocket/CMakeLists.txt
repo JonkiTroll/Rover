@@ -16,3 +16,4 @@ add_subdirectory(src)
 
 option(build_type "Decide whether or not the rover or the controller is being compiled")
 add_definitions(-DBUILD_TYPE=${BUILD_TYPE})
+
