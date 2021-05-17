@@ -130,7 +130,7 @@ int main(){
                 break;
             }
             default:{
-                cout << "Command " << recvCommand << " is not a valid command" << endl;
+                cout << "Command " << recvCommand << " is not a valid command." << endl;
             }
         }
     }
