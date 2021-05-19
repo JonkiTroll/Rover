@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 4
-Title ""
-Date ""
-Rev ""
+Title "Rover PCB schematic"
+Date "2021-05-15"
+Rev "0.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -370,9 +370,9 @@ Wire Wire Line
 	4300 1350 4300 1300
 Connection ~ 4300 1350
 Text GLabel 1800 5050 0    50   Input ~ 0
-Teensy_Uart_RX
+GPS_Uart_RX
 Text GLabel 1800 5150 0    50   Input ~ 0
-Teensy_Uart_TX
+GPS_Uart_TX
 Wire Wire Line
 	1800 5050 2050 5050
 Wire Wire Line
@@ -506,12 +506,12 @@ Wire Wire Line
 $Comp
 L power:GNDREF #PWR?
 U 1 1 60A746A9
-P 2850 7400
-F 0 "#PWR?" H 2850 7150 50  0001 C CNN
-F 1 "GNDREF" H 2855 7227 50  0001 C CNN
-F 2 "" H 2850 7400 50  0001 C CNN
-F 3 "" H 2850 7400 50  0001 C CNN
-	1    2850 7400
+P 2450 7400
+F 0 "#PWR?" H 2450 7150 50  0001 C CNN
+F 1 "GNDREF" H 2455 7227 50  0001 C CNN
+F 2 "" H 2450 7400 50  0001 C CNN
+F 3 "" H 2450 7400 50  0001 C CNN
+	1    2450 7400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -536,8 +536,6 @@ Wire Wire Line
 Wire Wire Line
 	2750 7250 2750 7400
 Connection ~ 2750 7400
-Wire Wire Line
-	2750 7400 2850 7400
 Wire Wire Line
 	2650 7250 2650 7400
 Wire Wire Line
@@ -596,18 +594,33 @@ Wire Wire Line
 	4000 5350 4450 5350
 Wire Wire Line
 	3050 4600 3050 4650
-Wire Wire Line
-	4300 4950 4300 4600
-Wire Wire Line
-	4300 4600 4000 4600
-Connection ~ 3050 4600
-Wire Wire Line
-	4000 4950 4000 4600
-Connection ~ 4000 4600
-Wire Wire Line
-	4000 4600 3050 4600
-Text Notes 3600 4500 0    50   ~ 0
+Text Notes 3250 4450 0    50   ~ 0
 Pullups need to be calculated based \non slva689 application note from \ntexas instruments\n
 Wire Wire Line
 	1800 1550 2000 1550
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60A5C7F9
+P 4150 4850
+F 0 "#PWR?" H 4150 4700 50  0001 C CNN
+F 1 "+3V3" H 4165 5023 50  0000 C CNN
+F 2 "" H 4150 4850 50  0001 C CNN
+F 3 "" H 4150 4850 50  0001 C CNN
+	1    4150 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4950 4000 4900
+Wire Wire Line
+	4000 4900 4150 4900
+Wire Wire Line
+	4150 4900 4150 4850
+Wire Wire Line
+	4300 4950 4300 4900
+Wire Wire Line
+	4300 4900 4150 4900
+Connection ~ 4150 4900
+Connection ~ 2450 7400
+Wire Wire Line
+	2750 7400 2850 7400
 $EndSCHEMATC
