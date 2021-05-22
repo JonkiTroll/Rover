@@ -38,7 +38,7 @@ U 1 1 608367C5
 P 2850 5950
 F 0 "J1" H 2165 7431 50  0000 C CNN
 F 1 "Raspberry_Pi_2_3" H 2165 7340 50  0000 C CNN
-F 2 "" H 2850 5950 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical" H 2850 5950 50  0001 C CNN
 F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 2850 5950 50  0001 C CNN
 	1    2850 5950
 	1    0    0    -1  
@@ -307,8 +307,8 @@ L Device:R R2
 U 1 1 60883081
 P 4100 1650
 F 0 "R2" H 4170 1696 50  0000 L CNN
-F 1 "R" H 4170 1605 50  0000 L CNN
-F 2 "" V 4030 1650 50  0001 C CNN
+F 1 "1k" H 4170 1605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4030 1650 50  0001 C CNN
 F 3 "~" H 4100 1650 50  0001 C CNN
 	1    4100 1650
 	1    0    0    -1  
@@ -323,7 +323,7 @@ U 1 1 60884984
 P 4100 2000
 F 0 "D1" V 4139 1882 50  0000 R CNN
 F 1 "LED" V 4048 1882 50  0000 R CNN
-F 2 "" H 4100 2000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 4100 2000 50  0001 C CNN
 F 3 "~" H 4100 2000 50  0001 C CNN
 	1    4100 2000
 	0    -1   -1   0   

@@ -403,7 +403,7 @@ AR Path="/60B9F99F" Ref="U?"  Part="1"
 AR Path="/609A082B/60B9F99F" Ref="U6"  Part="1" 
 F 0 "U6" H 5500 3865 50  0000 C CNN
 F 1 "Teensy4.0" H 5500 3774 50  0000 C CNN
-F 2 "" H 5100 2450 50  0001 C CNN
+F 2 "teensy:Teensy40" H 5100 2450 50  0001 C CNN
 F 3 "" H 5100 2450 50  0001 C CNN
 	1    5500 2250
 	1    0    0    -1  
@@ -416,7 +416,7 @@ AR Path="/60B9F9A5" Ref="SW?"  Part="1"
 AR Path="/609A082B/60B9F9A5" Ref="SW1"  Part="1" 
 F 0 "SW1" H 6900 3485 50  0000 C CNN
 F 1 "SW_DPDT_x2" H 6900 3394 50  0000 C CNN
-F 2 "" H 6900 3200 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6900 3200 50  0001 C CNN
 F 3 "~" H 6900 3200 50  0001 C CNN
 	1    6900 3200
 	1    0    0    -1  
@@ -448,7 +448,7 @@ AR Path="/60B9F9B4" Ref="D?"  Part="1"
 AR Path="/609A082B/60B9F9B4" Ref="D2"  Part="1" 
 F 0 "D2" V 6889 3382 50  0000 R CNN
 F 1 "LED" V 6798 3382 50  0000 R CNN
-F 2 "" H 6850 3500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 6850 3500 50  0001 C CNN
 F 3 "~" H 6850 3500 50  0001 C CNN
 	1    6850 3500
 	-1   0    0    1   
@@ -462,7 +462,7 @@ AR Path="/60B9F9BB" Ref="R?"  Part="1"
 AR Path="/609A082B/60B9F9BB" Ref="R10"  Part="1" 
 F 0 "R10" H 7120 3746 50  0000 L CNN
 F 1 "4.7k" H 7120 3655 50  0000 L CNN
-F 2 "" V 6980 3700 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6980 3700 50  0001 C CNN
 F 3 "~" H 7050 3700 50  0001 C CNN
 	1    7050 3700
 	1    0    0    -1  
@@ -489,29 +489,25 @@ Wire Wire Line
 Wire Wire Line
 	7000 3500 7050 3500
 Text GLabel 4200 1200 0    50   Input ~ 0
-PWM_Right
+PWM_Right_1
 Text GLabel 4200 1300 0    50   Input ~ 0
-PWM_Left
+PWM_Left_1
 Wire Wire Line
 	4200 1300 4400 1300
 Wire Wire Line
 	4200 1200 4400 1200
-Text GLabel 4200 1400 0    50   Input ~ 0
-PWMservo_1
-Text GLabel 6750 2400 2    50   Input ~ 0
-Neopixels_1
-Text GLabel 4200 1500 0    50   Input ~ 0
-PWMservo_2
 Text GLabel 4200 1600 0    50   Input ~ 0
-PWMservo_3
+PWMservo_1
 Text GLabel 4200 1700 0    50   Input ~ 0
-PWMservo_4
+PWMservo_2
 Text GLabel 4200 1800 0    50   Input ~ 0
-PWMservo_5
+PWMservo_3
 Text GLabel 4200 1900 0    50   Input ~ 0
+PWMservo_4
+Text GLabel 4200 2000 0    50   Input ~ 0
+PWMservo_5
+Text GLabel 4200 2100 0    50   Input ~ 0
 PWMservo_6
-Text GLabel 6750 2300 2    50   Input ~ 0
-Neopixels_2
 $Comp
 L power:GNDREF #PWR?
 U 1 1 60B9F9DB
@@ -528,10 +524,6 @@ $EndComp
 Wire Wire Line
 	4400 900  4300 900 
 Wire Wire Line
-	4200 1400 4400 1400
-Wire Wire Line
-	4200 1500 4400 1500
-Wire Wire Line
 	4200 1600 4400 1600
 Wire Wire Line
 	4200 1700 4400 1700
@@ -540,9 +532,9 @@ Wire Wire Line
 Wire Wire Line
 	4200 1900 4400 1900
 Wire Wire Line
-	6750 2300 6600 2300
+	4200 2000 4400 2000
 Wire Wire Line
-	6750 2400 6600 2400
+	4200 2100 4400 2100
 Text GLabel 4200 3300 0    50   Input ~ 0
 SDA
 Text GLabel 4200 3400 0    50   Input ~ 0
@@ -551,4 +543,69 @@ Wire Wire Line
 	4200 3300 4400 3300
 Wire Wire Line
 	4200 3400 4400 3400
+Text GLabel 4200 1400 0    50   Input ~ 0
+PWM_Right_2
+Text GLabel 4200 1500 0    50   Input ~ 0
+PWM_Left_1
+Wire Wire Line
+	4200 1500 4400 1500
+Wire Wire Line
+	4200 1400 4400 1400
+$Comp
+L Connector_Generic:Conn_01x06 J16
+U 1 1 60B35E0D
+P 2300 2500
+F 0 "J16" H 2218 1975 50  0000 C CNN
+F 1 "Conn_01x06" H 2218 2066 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 2300 2500 50  0001 C CNN
+F 3 "~" H 2300 2500 50  0001 C CNN
+	1    2300 2500
+	-1   0    0    1   
+$EndComp
+Text GLabel 2700 2700 2    50   Input ~ 0
+PWM_Right_1
+Text GLabel 2700 2600 2    50   Input ~ 0
+PWM_Left_1
+Wire Wire Line
+	2700 2600 2500 2600
+Wire Wire Line
+	2700 2700 2500 2700
+Text GLabel 2700 2500 2    50   Input ~ 0
+PWM_Right_2
+Text GLabel 2700 2400 2    50   Input ~ 0
+PWM_Left_1
+Wire Wire Line
+	2700 2400 2500 2400
+Wire Wire Line
+	2700 2500 2500 2500
+$Comp
+L power:GNDREF #PWR03
+U 1 1 60B40966
+P 2750 2250
+F 0 "#PWR03" H 2750 2000 50  0001 C CNN
+F 1 "GNDREF" V 2755 2122 50  0001 R CNN
+F 2 "" H 2750 2250 50  0001 C CNN
+F 3 "" H 2750 2250 50  0001 C CNN
+	1    2750 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2500 2200 2600 2200
+Wire Wire Line
+	2600 2200 2600 2250
+Wire Wire Line
+	2600 2250 2750 2250
+Wire Wire Line
+	2500 2300 2600 2300
+Wire Wire Line
+	2600 2300 2600 2250
+Connection ~ 2600 2250
+Text GLabel 4250 3000 0    50   Input ~ 0
+Neopixels_1
+Text GLabel 4250 3100 0    50   Input ~ 0
+Neopixels_2
+Wire Wire Line
+	4250 3100 4400 3100
+Wire Wire Line
+	4250 3000 4400 3000
 $EndSCHEMATC
