@@ -395,94 +395,65 @@ Wire Wire Line
 Text GLabel 1250 3750 2    50   Input ~ 0
 HE_R_OUTPUT
 $Comp
-L RPHat_V2-rescue:TXB0108YZPR2-TXB0108YZPR2 IC1
-U 1 1 60A9D2C1
-P 6450 3800
-F 0 "IC1" H 7000 4065 50  0000 C CNN
-F 1 "TXB0108YZPR2" H 7000 3974 50  0000 C CNN
-F 2 "TXB0108YZPR2:BGA20C50P4X5_189X239X50" H 7400 3900 50  0001 L CNN
-F 3 "http://www.ti.com/lit/gpn/TXB0108" H 7400 3800 50  0001 L CNN
-F 4 "8-Bit Bidirectional Voltage-Level Shifter with Auto Direction Sensing and +/-15-kV ESD Protect" H 7400 3700 50  0001 L CNN "Description"
-F 5 "0.5" H 7400 3600 50  0001 L CNN "Height"
-F 6 "Texas Instruments" H 7400 3500 50  0001 L CNN "Manufacturer_Name"
-F 7 "TXB0108YZPR2" H 7400 3400 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "595-TXB0108YZPR2" H 7400 3300 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TXB0108YZPR2?qs=PqoDHHvF64977Sea9xf4wg%3D%3D" H 7400 3200 50  0001 L CNN "Mouser Price/Stock"
-F 10 "TXB0108YZPR2" H 7400 3100 50  0001 L CNN "Arrow Part Number"
-F 11 "https://www.arrow.com/en/products/txb0108yzpr2/texas-instruments" H 7400 3000 50  0001 L CNN "Arrow Price/Stock"
-	1    6450 3800
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+1V8 #PWR0130
 U 1 1 609C23EB
-P 8100 3800
-F 0 "#PWR0130" H 8100 3650 50  0001 C CNN
-F 1 "+1V8" H 8115 3973 50  0000 C CNN
-F 2 "" H 8100 3800 50  0001 C CNN
-F 3 "" H 8100 3800 50  0001 C CNN
-	1    8100 3800
+P 5650 5300
+F 0 "#PWR0130" H 5650 5150 50  0001 C CNN
+F 1 "+1V8" H 5665 5473 50  0000 C CNN
+F 2 "" H 5650 5300 50  0001 C CNN
+F 3 "" H 5650 5300 50  0001 C CNN
+	1    5650 5300
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR0131
 U 1 1 609C3DE0
-P 5600 4500
-F 0 "#PWR0131" H 5600 4350 50  0001 C CNN
-F 1 "+3V3" H 5615 4673 50  0000 C CNN
-F 2 "" H 5600 4500 50  0001 C CNN
-F 3 "" H 5600 4500 50  0001 C CNN
-	1    5600 4500
+P 8550 5400
+F 0 "#PWR0131" H 8550 5250 50  0001 C CNN
+F 1 "+3V3" H 8565 5573 50  0000 C CNN
+F 2 "" H 8550 5400 50  0001 C CNN
+F 3 "" H 8550 5400 50  0001 C CNN
+	1    8550 5400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5600 4600 5600 4500
-Wire Wire Line
-	8100 3900 8100 3800
-Wire Wire Line
-	7550 3900 8100 3900
-Text GLabel 6350 4000 0    50   Input ~ 0
-SPI_MISO_18
-Text GLabel 6350 4100 0    50   Input ~ 0
-SPI_MOSI_18
-Text GLabel 6350 4400 0    50   Input ~ 0
+	5650 5400 5650 5300
+Text GLabel 7800 5700 2    50   Input ~ 0
 SPI_CLK_18
-Text GLabel 6350 4500 0    50   Input ~ 0
+Text GLabel 7800 5600 2    50   Input ~ 0
 IMU_CS_18
-Text GLabel 7600 3800 2    50   Input ~ 0
+Text GLabel 7750 5300 2    50   Input ~ 0
 BME_CS_18
-Text GLabel 6350 3900 0    50   Input ~ 0
+Text GLabel 6500 5100 0    50   Input ~ 0
 SPI_MISO_33
-Text GLabel 6350 3800 0    50   Input ~ 0
+Text GLabel 6500 5000 0    50   Input ~ 0
 SPI_MOSI_33
-Text GLabel 6350 4300 0    50   Input ~ 0
+Text GLabel 6500 5200 0    50   Input ~ 0
 SPI_CLK_33
-Text GLabel 6350 4200 0    50   Input ~ 0
+Text GLabel 6500 5300 0    50   Input ~ 0
 IMU_CS_33
-Text GLabel 6350 4700 0    50   Input ~ 0
+Text GLabel 6500 5600 0    50   Input ~ 0
 BME_CS_33
 Wire Wire Line
-	5600 4600 6450 4600
+	7750 5300 7700 5300
 Wire Wire Line
-	7600 3800 7550 3800
+	7800 5800 7700 5800
 Wire Wire Line
-	6350 4000 6450 4000
+	7800 5900 7700 5900
 Wire Wire Line
-	6350 4100 6450 4100
+	7800 5700 7700 5700
 Wire Wire Line
-	6350 4400 6450 4400
+	7800 5600 7700 5600
 Wire Wire Line
-	6350 4500 6450 4500
+	6500 5000 6600 5000
 Wire Wire Line
-	6350 3800 6450 3800
+	6500 5100 6600 5100
 Wire Wire Line
-	6350 3900 6450 3900
+	6500 5300 6600 5300
 Wire Wire Line
-	6350 4200 6450 4200
+	6500 5200 6600 5200
 Wire Wire Line
-	6350 4300 6450 4300
-Wire Wire Line
-	6350 4700 6450 4700
+	6500 5600 6600 5600
 Text GLabel 4700 5850 2    50   Input ~ 0
 SDA
 Text GLabel 4700 5950 2    50   Input ~ 0
@@ -699,60 +670,51 @@ Connection ~ 1300 1650
 $Comp
 L Device:C C14
 U 1 1 60AB39EC
-P 5600 4750
-F 0 "C14" H 5715 4796 50  0000 L CNN
-F 1 "100nF" H 5715 4705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5638 4600 50  0001 C CNN
-F 3 "~" H 5600 4750 50  0001 C CNN
-	1    5600 4750
+P 8550 5650
+F 0 "C14" H 8665 5696 50  0000 L CNN
+F 1 "100nF" H 8665 5605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8588 5500 50  0001 C CNN
+F 3 "~" H 8550 5650 50  0001 C CNN
+	1    8550 5650
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C15
 U 1 1 60AB76A4
-P 8100 4050
-F 0 "C15" H 8215 4096 50  0000 L CNN
-F 1 "100nF" H 8215 4005 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8138 3900 50  0001 C CNN
-F 3 "~" H 8100 4050 50  0001 C CNN
-	1    8100 4050
+P 5650 5550
+F 0 "C15" H 5765 5596 50  0000 L CNN
+F 1 "100nF" H 5765 5505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5688 5400 50  0001 C CNN
+F 3 "~" H 5650 5550 50  0001 C CNN
+	1    5650 5550
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GNDREF #PWR01
 U 1 1 60ABB27E
-P 5600 4950
-F 0 "#PWR01" H 5600 4700 50  0001 C CNN
-F 1 "GNDREF" H 5605 4777 50  0001 C CNN
-F 2 "" H 5600 4950 50  0001 C CNN
-F 3 "" H 5600 4950 50  0001 C CNN
-	1    5600 4950
+P 8550 5850
+F 0 "#PWR01" H 8550 5600 50  0001 C CNN
+F 1 "GNDREF" H 8555 5677 50  0001 C CNN
+F 2 "" H 8550 5850 50  0001 C CNN
+F 3 "" H 8550 5850 50  0001 C CNN
+	1    8550 5850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5600 4900 5600 4950
-Connection ~ 8100 3900
+	8550 5800 8550 5850
 $Comp
 L power:GNDREF #PWR02
 U 1 1 60ACAE6A
-P 8100 4250
-F 0 "#PWR02" H 8100 4000 50  0001 C CNN
-F 1 "GNDREF" H 8105 4077 50  0001 C CNN
-F 2 "" H 8100 4250 50  0001 C CNN
-F 3 "" H 8100 4250 50  0001 C CNN
-	1    8100 4250
+P 5650 5750
+F 0 "#PWR02" H 5650 5500 50  0001 C CNN
+F 1 "GNDREF" H 5655 5577 50  0001 C CNN
+F 2 "" H 5650 5750 50  0001 C CNN
+F 3 "" H 5650 5750 50  0001 C CNN
+	1    5650 5750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8100 4200 8100 4250
-Wire Wire Line
-	7550 4000 7800 4000
-Wire Wire Line
-	7800 4000 7800 4200
-Wire Wire Line
-	7800 4200 8100 4200
-Connection ~ 8100 4200
-Connection ~ 5600 4600
+	5650 5700 5650 5750
 $Comp
 L Device:R R4
 U 1 1 60AE3FA9
@@ -790,4 +752,42 @@ Wire Wire Line
 Connection ~ 2700 6600
 Wire Wire Line
 	2700 6600 2700 6850
+$Comp
+L User:TXB0108DQSR IC1
+U 1 1 60AA4FBA
+P 6600 5000
+F 0 "IC1" H 7150 5265 50  0000 C CNN
+F 1 "TXB0108DQSR" H 7150 5174 50  0000 C CNN
+F 2 "User:TXB0108DQSR" H 7550 5100 50  0001 L CNN
+F 3 "http://www.ti.com/lit/gpn/txb0108" H 7550 5000 50  0001 L CNN
+F 4 "8-Bit Bidirectional Voltage-Level Shifter with Auto Direction Sensing and +/-15-kV ESD Protect" H 7550 4900 50  0001 L CNN "Description"
+F 5 "0" H 7550 4800 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 7550 4700 50  0001 L CNN "Manufacturer_Name"
+F 7 "TXB0108DQSR" H 7550 4600 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "595-TXB0108DQSR" H 7550 4500 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TXB0108DQSR?qs=EuM%2FBx4ov4SMZCOlCh%2FWxA%3D%3D" H 7550 4400 50  0001 L CNN "Mouser Price/Stock"
+F 10 "TXB0108DQSR" H 7550 4300 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/txb0108dqsr/texas-instruments" H 7550 4200 50  0001 L CNN "Arrow Price/Stock"
+	1    6600 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 5500 8550 5400
+Connection ~ 8550 5500
+Text GLabel 7800 5900 2    50   Input ~ 0
+SPI_MOSI_18
+Text GLabel 7800 5800 2    50   Input ~ 0
+SPI_MISO_18
+Wire Wire Line
+	7700 5500 8550 5500
+Wire Wire Line
+	6600 5500 6500 5500
+Wire Wire Line
+	6500 5500 6500 5400
+Wire Wire Line
+	6500 5400 6600 5400
+Wire Wire Line
+	6500 5400 5650 5400
+Connection ~ 6500 5400
+Connection ~ 5650 5400
 $EndSCHEMATC

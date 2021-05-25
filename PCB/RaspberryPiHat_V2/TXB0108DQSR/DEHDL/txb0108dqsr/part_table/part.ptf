@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'TXB0108DQSR'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "TXB0108DQSR" (!) = "", "TXB0108DQSR", "Other", "595-TXB0108DQSR", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TXB0108DQSR?qs=EuM%2FBx4ov4SMZCOlCh%2FWxA%3D%3D", "TXB0108DQSR", "https://www.arrow.com/en/products/txb0108dqsr/texas-instruments", "8-Bit Bidirectional Voltage-Level Shifter with Auto Direction Sensing and +/-15-kV ESD Protect", "http://www.ti.com/lit/gpn/txb0108", "0 mm"
+END_PART
+
+END.
