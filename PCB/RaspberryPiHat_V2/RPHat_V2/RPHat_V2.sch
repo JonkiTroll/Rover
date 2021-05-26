@@ -131,7 +131,7 @@ L Device:C C4
 U 1 1 60862A5D
 P 2000 1400
 F 0 "C4" H 2115 1446 50  0000 L CNN
-F 1 "C" H 2115 1355 50  0000 L CNN
+F 1 "10uF" H 2115 1355 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 2038 1250 50  0001 C CNN
 F 3 "~" H 2000 1400 50  0001 C CNN
 	1    2000 1400
@@ -358,8 +358,8 @@ L Device:C C5
 U 1 1 608A9FCA
 P 4300 1500
 F 0 "C5" H 4415 1546 50  0000 L CNN
-F 1 "C" H 4415 1455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 4338 1350 50  0001 C CNN
+F 1 "10uF" H 4415 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4338 1350 50  0001 C CNN
 F 3 "~" H 4300 1500 50  0001 C CNN
 	1    4300 1500
 	1    0    0    -1  
@@ -369,10 +369,6 @@ Wire Wire Line
 Wire Wire Line
 	4300 1350 4300 1300
 Connection ~ 4300 1350
-Text GLabel 1800 5050 0    50   Input ~ 0
-GPS_Uart_RX
-Text GLabel 1800 5150 0    50   Input ~ 0
-GPS_Uart_TX
 Wire Wire Line
 	1800 5050 2050 5050
 Wire Wire Line
@@ -401,7 +397,7 @@ U 1 1 60A0D572
 P 800 2500
 F 0 "BT1" H 908 2546 50  0000 L CNN
 F 1 "Battery" H 908 2455 50  0000 L CNN
-F 2 "Connector_PinSocket_2.00mm:PinSocket_1x02_P2.00mm_Vertical" V 800 2560 50  0001 C CNN
+F 2 "Connector_AMASS:AMASS_XT60-F_1x02_P7.20mm_Vertical" V 800 2560 50  0001 C CNN
 F 3 "~" V 800 2560 50  0001 C CNN
 	1    800  2500
 	1    0    0    -1  
@@ -425,9 +421,9 @@ Text GLabel 3800 6350 2    50   Input ~ 0
 SPI_MOSI_33
 Text GLabel 3800 6450 2    50   Input ~ 0
 SPI_CLK_33
-Text GLabel 1950 6250 0    50   Input ~ 0
+Text GLabel 1350 6250 0    50   Input ~ 0
 IMU_CS_33
-Text GLabel 1950 6150 0    50   Input ~ 0
+Text GLabel 1350 6150 0    50   Input ~ 0
 BME_CS_33
 Wire Wire Line
 	3800 6250 3650 6250
@@ -436,9 +432,7 @@ Wire Wire Line
 Wire Wire Line
 	3800 6450 3650 6450
 Wire Wire Line
-	1950 6250 2050 6250
-Wire Wire Line
-	1950 6150 2050 6150
+	1350 6150 1450 6150
 Wire Wire Line
 	800  2700 800  2950
 $Comp
@@ -623,4 +617,68 @@ Connection ~ 4150 4900
 Connection ~ 2450 7400
 Wire Wire Line
 	2750 7400 2850 7400
+$Comp
+L Device:R R?
+U 1 1 60B62977
+P 1450 5800
+AR Path="/6092276E/60B62977" Ref="R?"  Part="1" 
+AR Path="/60B62977" Ref="R11"  Part="1" 
+F 0 "R11" H 1520 5846 50  0000 L CNN
+F 1 "100k" H 1520 5755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" V 1380 5800 50  0001 C CNN
+F 3 "~" H 1450 5800 50  0001 C CNN
+	1    1450 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60B650BD
+P 1750 5800
+AR Path="/6092276E/60B650BD" Ref="R?"  Part="1" 
+AR Path="/60B650BD" Ref="R12"  Part="1" 
+F 0 "R12" H 1820 5846 50  0000 L CNN
+F 1 "100k" H 1820 5755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" V 1680 5800 50  0001 C CNN
+F 3 "~" H 1750 5800 50  0001 C CNN
+	1    1750 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 6150 1450 5950
+Wire Wire Line
+	1450 6150 2050 6150
+Connection ~ 1450 6150
+Wire Wire Line
+	1350 6250 1750 6250
+Wire Wire Line
+	1750 5950 1750 6250
+Connection ~ 1750 6250
+Wire Wire Line
+	1750 6250 2050 6250
+$Comp
+L power:+3V3 #PWR0162
+U 1 1 60B7EA21
+P 1600 5550
+F 0 "#PWR0162" H 1600 5400 50  0001 C CNN
+F 1 "+3V3" H 1615 5723 50  0000 C CNN
+F 2 "" H 1600 5550 50  0001 C CNN
+F 3 "" H 1600 5550 50  0001 C CNN
+	1    1600 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 5550 1600 5650
+Wire Wire Line
+	1450 5650 1600 5650
+Connection ~ 1600 5650
+Wire Wire Line
+	1600 5650 1750 5650
+Text GLabel 1350 6350 0    50   Input ~ 0
+IMU_INT_33
+Wire Wire Line
+	1350 6350 2050 6350
+Text GLabel 1800 5050 0    50   Input ~ 0
+GPS_RX
+Text GLabel 1800 5150 0    50   Input ~ 0
+GPS_TX
 $EndSCHEMATC
