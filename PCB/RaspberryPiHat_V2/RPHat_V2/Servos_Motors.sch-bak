@@ -19,7 +19,7 @@ U 1 1 609A115A
 P 1150 950
 F 0 "J5" H 1068 625 50  0000 C CNN
 F 1 "Conn_01x03" H 1068 716 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 1150 950 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1150 950 50  0001 C CNN
 F 3 "~" H 1150 950 50  0001 C CNN
 	1    1150 950 
 	-1   0    0    1   
