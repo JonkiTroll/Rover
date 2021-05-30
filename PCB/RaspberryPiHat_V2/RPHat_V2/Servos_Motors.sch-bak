@@ -19,7 +19,7 @@ U 1 1 609A115A
 P 1150 950
 F 0 "J5" H 1068 625 50  0000 C CNN
 F 1 "Conn_01x03" H 1068 716 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1150 950 50  0001 C CNN
+F 2 "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical" H 1150 950 50  0001 C CNN
 F 3 "~" H 1150 950 50  0001 C CNN
 	1    1150 950 
 	-1   0    0    1   
@@ -30,7 +30,7 @@ U 1 1 609A366B
 P 1150 1500
 F 0 "J6" H 1068 1175 50  0000 C CNN
 F 1 "Conn_01x03" H 1068 1266 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1150 1500 50  0001 C CNN
+F 2 "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical" H 1150 1500 50  0001 C CNN
 F 3 "~" H 1150 1500 50  0001 C CNN
 	1    1150 1500
 	-1   0    0    1   
@@ -41,7 +41,7 @@ U 1 1 609A39CF
 P 1150 2050
 F 0 "J7" H 1068 1725 50  0000 C CNN
 F 1 "Conn_01x03" H 1068 1816 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1150 2050 50  0001 C CNN
+F 2 "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical" H 1150 2050 50  0001 C CNN
 F 3 "~" H 1150 2050 50  0001 C CNN
 	1    1150 2050
 	-1   0    0    1   
@@ -52,7 +52,7 @@ U 1 1 609A3BBD
 P 1150 2600
 F 0 "J8" H 1068 2275 50  0000 C CNN
 F 1 "Conn_01x03" H 1068 2366 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1150 2600 50  0001 C CNN
+F 2 "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical" H 1150 2600 50  0001 C CNN
 F 3 "~" H 1150 2600 50  0001 C CNN
 	1    1150 2600
 	-1   0    0    1   
@@ -63,7 +63,7 @@ U 1 1 609A3F89
 P 2250 950
 F 0 "J13" H 2168 625 50  0000 C CNN
 F 1 "Conn_01x03" H 2168 716 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2250 950 50  0001 C CNN
+F 2 "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical" H 2250 950 50  0001 C CNN
 F 3 "~" H 2250 950 50  0001 C CNN
 	1    2250 950 
 	-1   0    0    1   
@@ -74,37 +74,13 @@ U 1 1 609A4A24
 P 2250 1500
 F 0 "J14" H 2168 1175 50  0000 C CNN
 F 1 "Conn_01x03" H 2168 1266 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2250 1500 50  0001 C CNN
+F 2 "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical" H 2250 1500 50  0001 C CNN
 F 3 "~" H 2250 1500 50  0001 C CNN
 	1    2250 1500
 	-1   0    0    1   
 $EndComp
 Text Notes 550  600  0    50   ~ 0
 Servos\n
-$Comp
-L Connector_Generic:Conn_01x03 J9
-U 1 1 609A3D4E
-P 1150 4250
-F 0 "J9" H 1068 3925 50  0000 C CNN
-F 1 "Conn_01x03" H 1068 4016 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1150 4250 50  0001 C CNN
-F 3 "~" H 1150 4250 50  0001 C CNN
-	1    1150 4250
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x03 J10
-U 1 1 609A3F8F
-P 1150 4850
-F 0 "J10" H 1068 4525 50  0000 C CNN
-F 1 "Conn_01x03" H 1068 4616 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1150 4850 50  0001 C CNN
-F 3 "~" H 1150 4850 50  0001 C CNN
-	1    1150 4850
-	-1   0    0    1   
-$EndComp
-Text Notes 600  3850 0    50   ~ 0
-Motor - PWM
 $Comp
 L power:GNDREF #PWR0143
 U 1 1 609A582E
@@ -287,14 +263,6 @@ Wire Wire Line
 	2450 1500 2550 1500
 Wire Wire Line
 	2450 1600 2550 1600
-Text GLabel 1500 4250 2    50   Input ~ 0
-PWM_Left
-Text GLabel 1500 4850 2    50   Input ~ 0
-PWM_Right
-Wire Wire Line
-	1500 4250 1350 4250
-Wire Wire Line
-	1500 4850 1350 4850
 Wire Notes Line
 	2050 5050 500  5050
 $Comp
@@ -303,7 +271,7 @@ U 1 1 609FD231
 P 1150 5450
 F 0 "J11" H 1068 5125 50  0000 C CNN
 F 1 "Conn_01x03" H 1068 5216 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1150 5450 50  0001 C CNN
+F 2 "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical" H 1150 5450 50  0001 C CNN
 F 3 "~" H 1150 5450 50  0001 C CNN
 	1    1150 5450
 	-1   0    0    1   
@@ -318,7 +286,7 @@ U 1 1 609FE2C3
 P 1150 6000
 F 0 "J12" H 1068 5675 50  0000 C CNN
 F 1 "Conn_01x03" H 1068 5766 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1150 6000 50  0001 C CNN
+F 2 "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical" H 1150 6000 50  0001 C CNN
 F 3 "~" H 1150 6000 50  0001 C CNN
 	1    1150 6000
 	-1   0    0    1   
@@ -544,7 +512,7 @@ Wire Wire Line
 Text GLabel 4200 1400 0    50   Input ~ 0
 PWM_Right_2
 Text GLabel 4200 1500 0    50   Input ~ 0
-PWM_Left_1
+PWM_Left_2
 Wire Wire Line
 	4200 1500 4400 1500
 Wire Wire Line
@@ -552,52 +520,52 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_01x06 J16
 U 1 1 60B35E0D
-P 2300 2500
-F 0 "J16" H 2218 1975 50  0000 C CNN
-F 1 "Conn_01x06" H 2218 2066 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2300 2500 50  0001 C CNN
-F 3 "~" H 2300 2500 50  0001 C CNN
-	1    2300 2500
+P 950 4550
+F 0 "J16" H 868 4025 50  0000 C CNN
+F 1 "Conn_01x06" H 868 4116 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B6B-EH-A_1x06_P2.50mm_Vertical" H 950 4550 50  0001 C CNN
+F 3 "~" H 950 4550 50  0001 C CNN
+	1    950  4550
 	-1   0    0    1   
 $EndComp
-Text GLabel 2700 2700 2    50   Input ~ 0
+Text GLabel 1350 4750 2    50   Input ~ 0
 PWM_Right_1
-Text GLabel 2700 2600 2    50   Input ~ 0
+Text GLabel 1350 4650 2    50   Input ~ 0
 PWM_Left_1
 Wire Wire Line
-	2700 2600 2500 2600
+	1350 4650 1150 4650
 Wire Wire Line
-	2700 2700 2500 2700
-Text GLabel 2700 2500 2    50   Input ~ 0
+	1350 4750 1150 4750
+Text GLabel 1350 4550 2    50   Input ~ 0
 PWM_Right_2
-Text GLabel 2700 2400 2    50   Input ~ 0
-PWM_Left_1
+Text GLabel 1350 4450 2    50   Input ~ 0
+PWM_Left_2
 Wire Wire Line
-	2700 2400 2500 2400
+	1350 4450 1150 4450
 Wire Wire Line
-	2700 2500 2500 2500
+	1350 4550 1150 4550
 $Comp
 L power:GNDREF #PWR03
 U 1 1 60B40966
-P 2750 2250
-F 0 "#PWR03" H 2750 2000 50  0001 C CNN
-F 1 "GNDREF" V 2755 2122 50  0001 R CNN
-F 2 "" H 2750 2250 50  0001 C CNN
-F 3 "" H 2750 2250 50  0001 C CNN
-	1    2750 2250
+P 1400 4300
+F 0 "#PWR03" H 1400 4050 50  0001 C CNN
+F 1 "GNDREF" V 1405 4172 50  0001 R CNN
+F 2 "" H 1400 4300 50  0001 C CNN
+F 3 "" H 1400 4300 50  0001 C CNN
+	1    1400 4300
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	2500 2200 2600 2200
+	1150 4250 1250 4250
 Wire Wire Line
-	2600 2200 2600 2250
+	1250 4250 1250 4300
 Wire Wire Line
-	2600 2250 2750 2250
+	1250 4300 1400 4300
 Wire Wire Line
-	2500 2300 2600 2300
+	1150 4350 1250 4350
 Wire Wire Line
-	2600 2300 2600 2250
-Connection ~ 2600 2250
+	1250 4350 1250 4300
+Connection ~ 1250 4300
 Text GLabel 4250 3000 0    50   Input ~ 0
 Neopixels_1
 Text GLabel 4250 3100 0    50   Input ~ 0
@@ -634,4 +602,14 @@ Wire Wire Line
 	6650 3400 6600 3400
 Wire Wire Line
 	6600 3200 7100 3200
+Text Notes 600  3850 0    50   ~ 0
+Motor - PWM
+Text GLabel 6750 2600 2    50   Input ~ 0
+HE_R_OUTPUT
+Text GLabel 6750 2500 2    50   Input ~ 0
+HE_L_OUTPUT
+Wire Wire Line
+	6750 2500 6600 2500
+Wire Wire Line
+	6750 2600 6600 2600
 $EndSCHEMATC

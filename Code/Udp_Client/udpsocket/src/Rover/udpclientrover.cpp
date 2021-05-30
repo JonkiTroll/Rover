@@ -40,7 +40,7 @@ int FindChar(const char *arr, const char char2find)
         }
     }
     cout << "Character not found" << endl;
-    return NULL;
+    return -1;
 }
 /*
  * Sends data over the UART to the Teensy. As of now, it only sends the speed array as the Teensy only controls the PWM to be sent to the ESC.
@@ -51,7 +51,7 @@ void TransmitUARTThread(int fd, const char *sendBuffer)
     char UARTBuffer[8];
 
     int index = FindChar(sendBuffer, '.');
-    if(index == NULL)
+    if(index == -1)
     {
         return;
     }

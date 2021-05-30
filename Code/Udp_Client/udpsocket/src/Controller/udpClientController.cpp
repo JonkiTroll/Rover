@@ -35,7 +35,7 @@ void sendThread(udp_client_server::udp_client *Client){
     
     string sendCommand;
 
-    for(;;) {
+    while(1) {
         cout << "Enter command" << endl;
         cin >> sendCommand;
         (*Client).send(sendCommand.c_str(), sendCommand.length());

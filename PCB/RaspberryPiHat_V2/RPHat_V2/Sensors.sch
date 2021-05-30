@@ -413,9 +413,9 @@ Text GLabel 7800 5600 2    50   Input ~ 0
 IMU_CS_18
 Text GLabel 7750 5300 2    50   Input ~ 0
 BME_CS_18
-Text GLabel 6500 5100 0    50   Input ~ 0
-SPI_MISO_33
 Text GLabel 6500 5000 0    50   Input ~ 0
+SPI_MISO_33
+Text GLabel 6500 5100 0    50   Input ~ 0
 SPI_MOSI_33
 Text GLabel 6500 5200 0    50   Input ~ 0
 SPI_CLK_33
@@ -426,17 +426,17 @@ BME_CS_33
 Wire Wire Line
 	7750 5300 7700 5300
 Wire Wire Line
-	7800 5800 7700 5800
-Wire Wire Line
 	7800 5900 7700 5900
+Wire Wire Line
+	7800 5800 7700 5800
 Wire Wire Line
 	7800 5700 7700 5700
 Wire Wire Line
 	7800 5600 7700 5600
 Wire Wire Line
-	6500 5000 6600 5000
-Wire Wire Line
 	6500 5100 6600 5100
+Wire Wire Line
+	6500 5000 6600 5000
 Wire Wire Line
 	6500 5300 6600 5300
 Wire Wire Line
@@ -736,9 +736,9 @@ $EndComp
 Wire Wire Line
 	8550 5500 8550 5400
 Connection ~ 8550 5500
-Text GLabel 7800 5900 2    50   Input ~ 0
-SPI_MOSI_18
 Text GLabel 7800 5800 2    50   Input ~ 0
+SPI_MOSI_18
+Text GLabel 7800 5900 2    50   Input ~ 0
 SPI_MISO_18
 Wire Wire Line
 	7700 5500 8550 5500
