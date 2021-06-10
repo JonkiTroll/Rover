@@ -476,7 +476,7 @@
   )
 
   (module Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical (layer F.Cu) (tedit 60B28DC4) (tstamp 60A9A31E)
-    (at 151.125 139.625 270)
+    (at 149.093 140.895 270)
     (descr "JST EH series connector, B3B-EH-A (http://www.jst-mfg.com/product/pdf/eng/eEH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST EH vertical")
     (path /609A082B/609A4A24)
@@ -528,7 +528,7 @@
   )
 
   (module Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical (layer F.Cu) (tedit 60B28DC8) (tstamp 60A9A307)
-    (at 145.725 139.625 270)
+    (at 143.693 140.895 270)
     (descr "JST EH series connector, B3B-EH-A (http://www.jst-mfg.com/product/pdf/eng/eEH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST EH vertical")
     (path /609A082B/609A3F89)
@@ -684,7 +684,7 @@
   )
 
   (module Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical (layer F.Cu) (tedit 5C28142C) (tstamp 60A9A1F0)
-    (at 140.475 139.625 270)
+    (at 138.443 140.895 270)
     (descr "JST EH series connector, B3B-EH-A (http://www.jst-mfg.com/product/pdf/eng/eEH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST EH vertical")
     (path /609A082B/609A3BBD)
@@ -736,7 +736,7 @@
   )
 
   (module Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical (layer F.Cu) (tedit 5C28142C) (tstamp 60A9A1D9)
-    (at 135.1 139.625 270)
+    (at 133.068 140.895 270)
     (descr "JST EH series connector, B3B-EH-A (http://www.jst-mfg.com/product/pdf/eng/eEH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST EH vertical")
     (path /609A082B/609A39CF)
@@ -788,7 +788,7 @@
   )
 
   (module Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical (layer F.Cu) (tedit 5C28142C) (tstamp 60A9A1C2)
-    (at 129.875 139.625 270)
+    (at 127.843 140.895 270)
     (descr "JST EH series connector, B3B-EH-A (http://www.jst-mfg.com/product/pdf/eng/eEH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST EH vertical")
     (path /609A082B/609A366B)
@@ -840,7 +840,7 @@
   )
 
   (module Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical (layer F.Cu) (tedit 5C28142C) (tstamp 60A9A1AB)
-    (at 124.725 139.625 270)
+    (at 122.693 140.895 270)
     (descr "JST EH series connector, B3B-EH-A (http://www.jst-mfg.com/product/pdf/eng/eEH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST EH vertical")
     (path /609A082B/609A115A)
@@ -2810,10 +2810,10 @@
     )
   )
 
-  (gr_line (start 92.456 148.082) (end 167.894 148.082) (layer Edge.Cuts) (width 0.05) (tstamp 60B35A4A))
-  (gr_line (start 92.456 87.63) (end 92.456 148.082) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 92.456 149.86) (end 167.894 149.86) (layer Edge.Cuts) (width 0.05) (tstamp 60B35A4A))
+  (gr_line (start 92.456 87.63) (end 92.456 149.86) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 167.894 87.63) (end 92.456 87.63) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 167.894 148.082) (end 167.894 87.63) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 167.894 149.86) (end 167.894 87.63) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 194.116 130.637) (end 194.116 120.137) (layer Edge.Cuts) (width 0.05) (tstamp 60AD7272))
   (gr_line (start 202.366 130.637) (end 194.116 130.637) (layer Edge.Cuts) (width 0.05))
   (gr_line (start 202.366 120.137) (end 202.366 130.637) (layer Edge.Cuts) (width 0.05))

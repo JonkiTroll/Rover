@@ -6,15 +6,15 @@
 #include <string>
 #include <unistd.h>
 
-#include <mutex>
 #include <thread>
+#include <opencv2/opencv.hpp>
 
 #include <wiringPi.h>
 #include <wiringSerial.h>
 
+
 using namespace std;
 
-circBuffer<std::string> uartBuffer(12);
 
 enum Command{
     SPEED = 's',
@@ -64,12 +64,12 @@ void TransmitUARTThread(int fd, const char *sendBuffer)
         serialPrintf(fd, UARTBuffer);
 }
 
-void ReceiveUDPThread(udp_client_server::udp_client *Client){
+void ReceiveUDPThread(udp_client_server::udp_client& Client, circBuffer<string>& mCircularBuffer){
     char recvBuffer[32];
 
     while(1) {
-        (*Client).recv(recvBuffer, sizeof(recvBuffer));
-        uartBuffer.put(recvBuffer);
+        Client.recv(recvBuffer, sizeof(recvBuffer));
+        //mCircularBuffer.put(string(recvBuffer));
     }
 }
 
@@ -106,15 +106,16 @@ int main(){
     int fd;
     string Temp;
     Command recvCommand;
+    circBuffer<string> commandBuffer(32);
 
     udp_client_server::udp_client RoverClient = setupUDP("167.71.138.109", 20001);
 
     setupUART(57600, fd);
 
-    thread recvT(ReceiveUDPThread, &RoverClient);
+    thread recvT(ReceiveUDPThread, ref(RoverClient), ref(commandBuffer));
 
     while(true) {
-        Temp = uartBuffer.get();
+        //Temp = commandBuffer.get();
         recvCommand = (Command) Temp.at(0);
 
 

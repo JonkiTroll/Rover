@@ -10,6 +10,7 @@
 #include <mutex>
 
 template <class T>
+
 class circBuffer{
     public:
         explicit circBuffer(size_t size) :
