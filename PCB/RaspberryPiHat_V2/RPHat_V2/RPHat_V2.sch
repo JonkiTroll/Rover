@@ -681,4 +681,120 @@ Text GLabel 1800 5050 0    50   Input ~ 0
 GPS_RX
 Text GLabel 1800 5150 0    50   Input ~ 0
 GPS_TX
+$Comp
+L User:TPS78418QWDRBRQ1 U7
+U 1 1 60C3BED3
+P 6000 1600
+F 0 "U7" H 6000 2075 50  0000 C CNN
+F 1 "TPS78418QWDRBRQ1" H 6000 1984 50  0000 C CNN
+F 2 "Package_SON:Texas_S-PVSON-N8_ThermalVias" H 5850 1950 50  0001 C CNN
+F 3 "chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://www.ti.com/lit/ds/symlink/tps784-q1.pdf?ts=1619420301262&ref_url=https%253A%252F%252Fwww.ti.com%252Fstore%252Fti%252Fen%252Fp%252Fproduct%252F%253Fp%253DTPS78401QWDRBRQ1%2526keyMatch%253DTPS78401QWDRBRQ1%2526tisearch%253Dsearch-everything%2526usecase%253DOPN" H 5850 1950 50  0001 C CNN
+	1    6000 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60C3FC04
+P 5500 1550
+AR Path="/6092276E/60C3FC04" Ref="C?"  Part="1" 
+AR Path="/60C3FC04" Ref="C16"  Part="1" 
+F 0 "C16" H 5615 1596 50  0000 L CNN
+F 1 "4,7uF" H 5615 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 5538 1400 50  0001 C CNN
+F 3 "~" H 5500 1550 50  0001 C CNN
+	1    5500 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0163
+U 1 1 60C4677D
+P 5500 1750
+F 0 "#PWR0163" H 5500 1500 50  0001 C CNN
+F 1 "GNDREF" H 5505 1577 50  0001 C CNN
+F 2 "" H 5500 1750 50  0001 C CNN
+F 3 "" H 5500 1750 50  0001 C CNN
+	1    5500 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0164
+U 1 1 60C49755
+P 5950 2050
+F 0 "#PWR0164" H 5950 1800 50  0001 C CNN
+F 1 "GNDREF" H 5955 1877 50  0001 C CNN
+F 2 "" H 5950 2050 50  0001 C CNN
+F 3 "" H 5950 2050 50  0001 C CNN
+	1    5950 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60C4CB7A
+P 6750 1550
+AR Path="/6092276E/60C4CB7A" Ref="C?"  Part="1" 
+AR Path="/60C4CB7A" Ref="C17"  Part="1" 
+F 0 "C17" H 6865 1596 50  0000 L CNN
+F 1 "1uF" H 6865 1505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 6788 1400 50  0001 C CNN
+F 3 "~" H 6750 1550 50  0001 C CNN
+	1    6750 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+1V8 #PWR0165
+U 1 1 60C4F94F
+P 5500 1150
+F 0 "#PWR0165" H 5500 1000 50  0001 C CNN
+F 1 "+1V8" H 5515 1323 50  0000 C CNN
+F 2 "" H 5500 1150 50  0001 C CNN
+F 3 "" H 5500 1150 50  0001 C CNN
+	1    5500 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0166
+U 1 1 60C5023F
+P 6750 1200
+F 0 "#PWR0166" H 6750 1050 50  0001 C CNN
+F 1 "+3V3" H 6765 1373 50  0000 C CNN
+F 2 "" H 6750 1200 50  0001 C CNN
+F 3 "" H 6750 1200 50  0001 C CNN
+	1    6750 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1150 5500 1350
+Wire Wire Line
+	5700 1350 5500 1350
+Connection ~ 5500 1350
+Wire Wire Line
+	5500 1350 5500 1400
+Wire Wire Line
+	5500 1700 5500 1750
+Wire Wire Line
+	5950 2000 5950 2050
+Wire Wire Line
+	6750 1700 6750 1850
+Wire Wire Line
+	6300 1350 6450 1350
+Wire Wire Line
+	6750 1350 6750 1200
+Wire Wire Line
+	6750 1400 6750 1350
+Connection ~ 6750 1350
+Wire Wire Line
+	6300 1450 6450 1450
+Wire Wire Line
+	6450 1450 6450 1350
+Connection ~ 6450 1350
+Wire Wire Line
+	6450 1350 6750 1350
+Wire Wire Line
+	6300 1850 6750 1850
+Wire Wire Line
+	5950 2050 6750 2050
+Wire Wire Line
+	6750 2050 6750 1850
+Connection ~ 5950 2050
+Connection ~ 6750 1850
 $EndSCHEMATC

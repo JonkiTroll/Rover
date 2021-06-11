@@ -604,12 +604,12 @@ Wire Wire Line
 	6600 3200 7100 3200
 Text Notes 600  3850 0    50   ~ 0
 Motor - PWM
-Text GLabel 6750 2600 2    50   Input ~ 0
+Text GLabel 4250 3500 0    50   Input ~ 0
 HE_R_OUTPUT
-Text GLabel 6750 2500 2    50   Input ~ 0
+Text GLabel 4250 3600 0    50   Input ~ 0
 HE_L_OUTPUT
 Wire Wire Line
-	6750 2500 6600 2500
+	4250 3600 4400 3600
 Wire Wire Line
-	6750 2600 6600 2600
+	4250 3500 4400 3500
 $EndSCHEMATC
