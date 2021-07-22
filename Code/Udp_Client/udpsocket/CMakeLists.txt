@@ -8,12 +8,14 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_CXX_FLAGS -pthread) #Needs -pthread flag to be able to use thread library
 
+set(LIBS ${CMAKE_SOURCE_DIR}/lib/src/udpClientClass.cpp
+        )
 
-include_directories(lib/include)
-include_directories(include)
+set(LIB_DIR ${CMAKE_SOURCE_DIR}/lib/include)
+
 
 add_subdirectory(src)
 
-option(build_type "Decide whether or not the rover or the controller is being compiled")
-add_definitions(-DBUILD_TYPE=${BUILD_TYPE})
+#option(build_type "Decide whether or not the rover or the controller is being compiled")
+#add_definitions(-DBUILD_TYPE=${BUILD_TYPE})
 

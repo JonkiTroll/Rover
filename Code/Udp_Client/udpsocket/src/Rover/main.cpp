@@ -2,9 +2,7 @@
 #include "udpClientClass.h"
 #include "circBuffer.h"
 #include "iostream"
-#include <stdlib.h>
-#include <string>
-#include <unistd.h>
+#include <cstdlib>
 
 #include <thread>
 #include <opencv2/opencv.hpp>
@@ -22,6 +20,9 @@ enum Command{
     CAMERA = 'c'
 };
 
+/*
+ * Runs the system command for text to speech. USes the festival plugin.
+ */
 
 void Text2Speech(string message)
 {
@@ -40,7 +41,7 @@ int FindChar(const char *arr, const char char2find)
         }
     }
     cout << "Character not found" << endl;
-    return -1;
+    return 1;
 }
 /*
  * Sends data over the UART to the Teensy. As of now, it only sends the speed array as the Teensy only controls the PWM to be sent to the ESC.
@@ -59,17 +60,18 @@ void TransmitUARTThread(int fd, const char *sendBuffer)
         for(int i = 0; i < index; i++) {
             UARTBuffer[i] = *(sendBuffer + index+i);
         }
-        *(UARTBuffer+index+1) = '\n';
-        *(UARTBuffer+index+2) = '\0';
-        serialPrintf(fd, UARTBuffer);
+
+            UARTBuffer[index+1] = '\n';
+            UARTBuffer[index+2] = '\0';
+            serialPrintf(fd, UARTBuffer);
 }
 
 void ReceiveUDPThread(udp_client_server::udp_client& Client, circBuffer<string>& mCircularBuffer){
     char recvBuffer[32];
 
-    while(1) {
+    while(true) {
         Client.recv(recvBuffer, sizeof(recvBuffer));
-        //mCircularBuffer.put(string(recvBuffer));
+        mCircularBuffer.put(string(recvBuffer));
     }
 }
 
@@ -97,7 +99,7 @@ udp_client_server::udp_client setupUDP(const string& IP, const int PORT)
 
 int setupUART(int baudrate, int &fd)
 {
-    if((fd = serialOpen("/dev/ttyS0",baudrate)) < 0)return 1;
+    if((fd = serialOpen("/dev/ttyS0",baudrate)) < 0) return 1;
     if(wiringPiSetup() < 0) return 1;
     return 0;
 }
@@ -115,9 +117,8 @@ int main(){
     thread recvT(ReceiveUDPThread, ref(RoverClient), ref(commandBuffer));
 
     while(true) {
-        //Temp = commandBuffer.get();
+        Temp = commandBuffer.get();
         recvCommand = (Command) Temp.at(0);
-
 
         switch (recvCommand) {
             case SPEED: {

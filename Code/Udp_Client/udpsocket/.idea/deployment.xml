@@ -15,10 +15,10 @@
             <mapping deploy="/tmp/udpsocket" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-raspbi" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-raspbi" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-raspbi-qemu" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-raspbi" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
           </excludedPaths>
         </serverdata>
       </paths>
@@ -63,6 +63,16 @@
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-raspbi" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-raspbi-qemu" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release-raspbi" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="raspbi home (bc7d7179-cb3f-4373-b6df-dec721d995c2)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.yKwwQ2AlIB" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
           </excludedPaths>
         </serverdata>
       </paths>

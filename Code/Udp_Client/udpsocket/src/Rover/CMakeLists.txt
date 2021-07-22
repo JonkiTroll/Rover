@@ -4,9 +4,11 @@
 find_library(wiringPi_LIB wiringPi)
 
 find_package(OpenCV REQUIRED)
-include_directories( ${OpenCV_INCLUDE_DIRS} )
+include_directories( ${OpenCV_INCLUDE_DIRS} ${LIB_DIR})
 
-add_executable(udpclientrover udpclientrover.cpp ../../lib/src/udpClientClass.cpp ../../lib/src/circBuffer.cpp)
+add_executable(udpclientrover main.cpp ${LIBS})
+
+target_link_directories(udpclientrover PUBLIC ${LIB_DIR})
 
 target_link_libraries( udpclientrover   ${OpenCV_LIBS}
                                         ${wiringPi_LIB})
