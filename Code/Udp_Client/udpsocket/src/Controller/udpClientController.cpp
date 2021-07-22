@@ -35,7 +35,7 @@ void sendThread(udp_client_server::udp_client *Client){
     
     string sendCommand;
 
-    for(;;) {
+    while(1) {
         cout << "Enter command" << endl;
         cin >> sendCommand;
         (*Client).send(sendCommand.c_str(), sendCommand.length());
@@ -45,10 +45,10 @@ void sendThread(udp_client_server::udp_client *Client){
 
 int main() {
 
-    //int PORT = 20001;
-    //const string IP = "167.71.138.109"; //Kristo server
-    int PORT = 8080;
-    const string IP = "127.0.0.1"; //localhost
+    int PORT = 20001;
+    const string IP = "167.71.138.109"; //Kristo server
+    //int PORT = 8080;
+    //const string IP = "127.0.0.1"; //localhost
     const string RoleMsg = "i am controller"; //
     char roleBuffer[64];
 

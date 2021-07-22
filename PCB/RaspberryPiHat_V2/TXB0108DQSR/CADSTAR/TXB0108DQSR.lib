@@ -1,0 +1,17 @@
+.TXB0108DQSR :1 ;8-Bit Bidirectional Voltage-Level Shifter with Auto Direction Sensing and +/-15-kV ESD Protect
+TXB0108DQSR
+*STM IC
+*NGS
+*PLB 1="A1" 2="A2" 3="A3" 4="A4" 5="VCCA" 6="OE" 7="A5" 8="A6" 9="A7" 10="A8" 11="B8" 12="B7" 13="B6" 14="B5" 15="GND" 16="VCCB" 17="B4" 18="B3" 19="B2" 20="B1"
+*MXP 20
+*DFN TXB0108DQSR
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (TXB0108DQSR)
+~!Mouser Part Number (595-TXB0108DQSR)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TXB0108DQSR?qs=EuM%2FBx4ov4SMZCOlCh%2FWxA%3D%3D)
+~!Arrow Part Number (TXB0108DQSR)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/txb0108dqsr/texas-instruments)
+~!Link Datasheet (http://www.ti.com/lit/gpn/txb0108)
+~!Height (0mm)
+TXB0108DQSR
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 16.1!U 17.1!U 18.1!U 19.1!U 20.1!U 
