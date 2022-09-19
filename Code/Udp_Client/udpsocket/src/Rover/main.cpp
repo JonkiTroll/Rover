@@ -110,7 +110,7 @@ int main(){
     Command recvCommand;
     circBuffer<string> commandBuffer(32);
 
-    udp_client_server::udp_client RoverClient = setupUDP("167.71.138.109", 20001);
+    udp_client_server::udp_client RoverClient = setupUDP("xxx.xxx.xxx.xxx", 20001);
 
     setupUART(57600, fd);
 
