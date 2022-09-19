@@ -46,7 +46,7 @@ void sendThread(udp_client_server::udp_client *Client){
 int main() {
 
     int PORT = 20001;
-    const string IP = "167.71.138.109"; //Kristo server
+    const string IP = "xxx.xxx.xxx.xxx"; //Kristo server
     //int PORT = 8080;
     //const string IP = "127.0.0.1"; //localhost
     const string RoleMsg = "i am controller"; //
